@@ -1,0 +1,64 @@
+The massive growth in IoT devices worldwide has resulted in the production of an enormous amount of data by these devices. 
+
+To meet the growing demand for analyzing and processing these data, the implementation of fog computing, along with cloud computing, is an ideal solution. 
+
+Fog computing is a distributed and independent digital environment in which the applications and data storage are positioned between data sources (devices generating data) and the cloud service.
+
+Fog computing is an extended version of cloud computing that comprises multiple edge nodes that are directly connected to physical devices to enable service access to the end users.
+
+Generally, fog refers to the idea of creating an individual layer in distributed network infrastructure that has close inter-connections with IoT and cloud computing. 
+
+It acts as an intermediary between the hardware and remote servers, and it is also called an intelligent gateway. 
+
+Fog can be used for enhanced data processing, storage, and analysis in a quick and efficient manner. 
+
+Many organizations have adopted this technology as it can provide additional functionalities for quick and efficient data processing, storage, and analysis.
+
+
+Working of Fog Computing 
+Devices with an Internet connection, computational abilities, and data storage are referred to as nodes of fog. 
+
+Fog nodes can be deployed anywhere in a network. The IoT applications for fog nodes are ported at the network edge. 
+
+The fog nodes close to the network edge take data from IoT devices, enabling short-term analytics at the edge. 
+
+Fog computing can be very beneficial in case of an unstable Internet connection. 
+
+Urgent requests are transmitted directly into the fog and are processed in real time in the local network. 
+
+Fog computing can be used in applications such as smart cities, smart grids, connected cars, and real-time analytics.
+
+
+
+**Edge Computing**
+
+Conventional cloud computing has some issues related to data security, low performance, and increased data storage, which lead to high operational costs.
+
+These issues can be solved by replacing conventional cloud computing with edge computing.
+
+Edge computing is a subset of fog computing, and its approach to data processing is similar to that of fog computing. 
+
+In fog computing, the intelligent gateway performs processing at the LAN, whereas in edge computing, the edge gateway intelligence is performed in devices such as programmable automation controllers. 
+
+Edge computing is used in solutions that require the processing of small and urgent operations within a timespan of milliseconds. 
+
+Edge computing is a distributed, decentralized computing model in which computation and data processing are performed close to edge devices. 
+
+It stores data at locations close to the devices from which the data were collected, instead of trusting a central location to store the data. 
+
+It also reduces the Internet bandwidth usage and data offload. 
+
+Many organizations can utilize this technology for building automation systems for fast processing, prompt responses, and efficient real-time applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
