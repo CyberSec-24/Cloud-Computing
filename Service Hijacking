@@ -1,3 +1,5 @@
+Service Hijacking using Social Engineering
+
 In account or service hijacking, an attacker steals the credentials of a CSP or a client by phishing, pharming, social engineering, and exploitation of software vulnerabilities. 
 
 Using the stolen credentials, the attacker gains access to the cloud computing services and compromises data confidentiality, integrity, and availability.
@@ -25,7 +27,23 @@ Countermeasures:
 ▪ Strictly follow the security policies framed
 
 
+Service Hijacking using Network Sniffing
+Network sniffing involves the interception and monitoring of network traffic between two cloud nodes.
 
+Unencrypted sensitive data (e.g., login credentials) during transmission across a network are at high risk. 
+
+Attackers use packet sniffers (e.g., Wireshark) to capture sensitive data, such as passwords and session cookies, and other web service-related security configuration data, 
+such as the universal description discovery and integrity (UDDI), simple object access protocol (SOAP), and web service description language (WSDL) files.
+
+when a user enters login credentials to access cloud services, an attacker can sniff the credentials/cookies during their transmission across a network using packet sniffers, 
+such as Wireshark and Capsa Portable Network Analyzer.
+
+The attacker then logs into the cloud services via the stolen credentials.
+
+Countermeasures: 
+▪ Encrypt sensitive data over the network. 
+▪ Encrypt sensitive data in configuration files. 
+▪ Detect network interface controllers (NICs) running in promiscuous mode
 
 
 
