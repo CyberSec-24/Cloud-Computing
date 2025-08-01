@@ -1,0 +1,64 @@
+A cluster refers to a set of two or more connected nodes that run parallelly to complete a task. Workloads with individual, parallelizable tasks are shared among the nodes.
+
+These tasks utilize the combined memory and computational power of all the nodes in a cluster.
+
+One of the nodes acts as a master node, which is responsible for allocating the work, retrieving the results, and giving a response.
+
+Types of Cluster Computing Given below are the different types of clusters. 
+o Highly Available (HA) or Fail-over: In a fail-over cluster, more than one node runs simultaneously to offer high availability (HA) or continuous availability (CA).
+If one node fails, the other node assumes its responsibility with minimum or no downtime.
+
+o Load Balancing: In a load-balancing cluster, the workload is distributed among the nodes to avoid overstressing a single node. 
+The load balancer performs periodic health checks on each node to identify node failures and reroutes the incoming traffic to another node. 
+A load-balancing cluster is also a highly available cluster.
+
+o High-Performance Computing: 
+In a high-performance computing (HPC) cluster, the nodes are configured to provide extreme performance by parallelizing the tasks. Scaling also helps in maximizing performance.
+
+Clusters in the Cloud
+Clusters in the cloud are sets of nodes hosted on virtual machines (VMs) and are often coupled with virtual private clouds.
+
+Cloud clustering minimizes the effort and time required to establish a cluster. 
+
+In a cloud environment, the clusters can be scaled up on demand by adding additional resources or instances such as VMs easily.
+
+The cloud also provides the flexibility of upgrading infrastructure according to changes in requirements. 
+
+Furthermore, the cloud enhances latency and resiliency via node deployment in many availability zones. 
+
+Cloud clustering maximizes the cluster’s availability, security, and maintainability.
+
+
+Containers and their relationship with Clusters
+Containers help in running applications reliably under different computing environments. 
+
+For instance, an organization develops a web application building the frontend and backend as microservices.
+
+To deploy this web application, containers can be pushed onto a VM in the cloud.
+
+If either the VM or the hardware fails, then the application is inaccessible until traffic is handled by a fail-over server.
+
+To enhance the availability, scalability, and performance of web applications, push the containerized applications onto several nodes in a cluster.
+
+Consequently, containers running on various nodes maximize resource utilization. 
+
+Moreover, the risk of single-node failure can be eliminated by placing an instance of a container on every node in a cluster.
+
+
+Container Management Platforms 
+Portainer is the most versatile container management tool that simplifies secure adoption of containers at a remarkable speed irrespective of the industry, orchestration platform, or computing device. 
+
+Portainer makes it easy for cloud administrators to set up, maintain and troubleshoot container infrastructure in public clouds and datacenters.
+
+
+
+
+
+
+
+
+
+
+
+
+
