@@ -1,0 +1,121 @@
+Docker is an open-source technology used for developing, packaging, and running applications. 
+
+All Docker dependencies are in the form of containers to ensure that applications work in a seamless environment. 
+
+Docker provides a PaaS through OS-level virtualization and delivers containerized software packages. 
+
+This technology isolates applications from the underlying infrastructure for faster software delivery. 
+
+The benefit of Docker is that when an application is packaged along with its dependencies into a Docker container, it can run in any environment. 
+
+Furthermore, when developers build applications using Docker, they are assured that there will be no interference between them because Docker containers are isolated from each other and communicate via well-defined channels
+
+
+Docker Engine
+The Docker engine is a client/server application installed on a host that allows to develop, deploy, and run applications using the following components:
+
+▪ Server: It is a persistent back-end process, also known as a daemon process (dockerd command).
+
+▪ Rest API: This API allows the communication and assignment of tasks to the daemon. 
+
+▪ Client CLI: It is the command-line interface used to communicate with the daemon and where various Docker commands are initiated
+
+
+Docker Swarm
+The Docker engine supports the swarm mode that allows managing multiple Docker engines within the Docker platform. 
+
+Docker CLI is used for creating a swarm, deploying an application to the swarm, and handling its activity or behavior.
+
+The swarm mode enables administrators and developers to ▪ Communicate with containers and assign jobs to different containers 
+▪ Expand or reduce the number of containers based on the load 
+▪ Carry out a health check and handle the lifecycle of different containers 
+▪ Dispense failover and redundancy to continue a process even if node failure occurs
+▪ Perform timely software updates to all containers
+
+
+Docker Architecture
+The Docker architecture employs a client/server model and consists of various components, such as the host, client, network, registry, and other storage units.
+
+The Docker client interacts with the Docker daemon, which develops, runs, and distributes the containers. 
+
+The Daemon and Docker clients can carry out operations on the same host; alternatively, users can connect the Docker client to remote daemons. 
+
+The communication between the Docker client and the Docker server daemon is established via REST API
+
+▪ Docker Daemon: The Docker daemon (dockerd) processes the API requests and handles various Docker objects, such as containers, volumes, images, and networks.
+
+▪ Docker Client: It is the primary interface through which users communicate with Docker. 
+When commands such as docker run are initiated, the client passes related commands to dockerd, which then executes them. Docker commands use the Docker API for communication.
+
+▪ Docker Registries: Docker registries are locations where images are stored and pulled, and can be either private or public.
+Docker Cloud and Docker Hub are two popular public registries. Docker Hub is a predefined location of Docker images, which can be used by all users.
+
+
+
+▪ Docker Objects: 
+
+Docker objects are used to assemble an application. The most important Docker objects are as follows:
+o Images: Images are used to store and deploy containers. They are read-only binary templates with instructions for container creation.
+
+o Containers: Application resources run inside the containers.
+A container is a runnable instance of an application image. Docker CLI or API is used to create, launch, stop, and destroy these containers.
+
+o Services: Services enable users to extend the number of containers across daemons, and together they serve as a swarm with several managers and workers.
+Each swarm member is a daemon, and all these daemons can interact with each other using Docker API.
+
+o Networking: It is a channel through which all isolated containers communicate.
+
+o Volumes: It is a storage where persisting data created by Docker and used by Docker containers are stored.
+
+
+Docker Operations
+
+Common operations performed by Docker images include 
+▪ Building a new image from a Dockerfile 
+▪ Listing all local images 
+▪ Tagging an existing image 
+▪ Pulling a new image from the Docker registry 
+▪ Pushing a local image to the Docker registry
+▪ Searching for existing images
+
+
+Monolithic applications are broken down into cloud-hosted sub-applications, called microservices, that work together, each performing a unique task.
+
+Microservices divide and distribute the application workload, providing stable, seamless, and scalable services by interacting with each other.
+
+Monolithic applications are decomposed around business capabilities supporting cross-functional teams to develop, support, and deploy microservices.
+
+Compared to traditional data storage models used by monolithic applications, microservices decentralize data storage by managing their own data stores. 
+
+Developers create a Docker container for each microservice. 
+
+As each microservice is packaged into the container along with the required libraries, frameworks, and configuration files, microservices belonging to a single application can be developed and managed using multiple platforms
+
+
+Docker Networking
+Docker allows connecting multiple containers and services or other non-Docker workloads together.
+
+It can manage Docker hosts running on multiple platforms, such as Linux and Windows, in a platform-independent way. 
+
+The Docker networking architecture is developed on a set of interfaces known as the container network model (CNM), which provides application portability across heterogeneous infrastructures.
+
+The CNM includes multiple high-level constructs as discussed below: 
+▪ Sandbox: Sandbox comprises the container network stack configuration for the management of container interfaces, routing tables, and domain name system (DNS) settings.
+
+▪ Endpoint: To maintain application portability, an endpoint is connected to a network and is abstracted away from the application, so that services can implement different network drivers.
+
+▪ Network: A network is an interconnected collection of endpoints. Endpoints that do not have network connection cannot communicate over the network
+
+
+Docker engine includes five native network drivers, as discussed below: 
+▪ Host: By using a host driver, a container implements the host networking stack. 
+▪ Bridge: A bridge driver is used to create a Linux bridge on the host that is managed by the Docker.
+▪ Overlay: An overlay driver is used to enable container communication over the physical network infrastructure.
+▪ MACVLAN: A macvlan driver is used to create a network connection between container interfaces and the parent host interface or sub-interfaces using the Linux MACVLAN bridge mode.
+▪ None: A none driver implements its own networking stack and is isolated completely from the host networking stack
+
+
+
+
+
+
