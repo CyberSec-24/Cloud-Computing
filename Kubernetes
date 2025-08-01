@@ -57,7 +57,13 @@ o Container Runtime: Container runtime is a software designed to run the contain
 Kubernetes supports various container runtimes, such as Docker, rktlet, containerd, and cri-o.
 
 
+Kubernetes Platforms
 
+The Mirantis Kubernetes Engine is a CNCF-validated enterprise Kubernetes platform designed to develop and run modern applications at scale.
+
+It supports private clouds, public clouds, and bare metal environments. It empowers organizations to adopt cloud-native application development and delivery models.
+
+It also enables multicluster management and provides a unified interface for streamlined operations, including swarm cluster instances
 
 
 
