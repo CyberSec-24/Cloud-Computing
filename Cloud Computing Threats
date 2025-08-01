@@ -1,0 +1,508 @@
+Data Security 
+
+▪ Data Breach/Loss
+
+An improperly designed cloud computing environment with multiple clients is at high risk of a data breach because a flaw in one client’s application can allow attackers to access other client’s data.
+
+Data loss or leakage is highly dependent on cloud architecture and operation. Data loss issues include the following
+: o Data is erased, modified or decoupled (lost). 
+o Encryption keys are lost, misplaced or stolen. 
+o Data are accessed illegally owing to improper authentication, authorization, and access controls.
+o Data is misused by the CSP
+
+Countermeasures: 
+o Encrypt the data stored in the cloud and the data in transit to protect data integrity. 
+o Implement strong key generation, storage, and management. o Check for data protection both during design and runtime. 
+
+
+▪ Loss of Operational and Security Logs
+The loss of operational logs makes it challenging to evaluate operational variables.
+
+The options for solving issues are limited when no data is available for analysis. 
+
+The loss of security logs poses a risk for managing the implementation of the information security management program.
+
+Loss of security logs may occur in case of storage under-provisioning.
+
+Countermeasures:
+o Implement effective policies and procedures.
+o Monitor operational and security logs regularly. 
+o Establish and maintain a safe log management system
+
+
+Malicious Insiders
+Malicious insiders are disgruntled current/former employees, contractors, or other business partners who have/had authorized access to cloud resources and could intentionally exceed or misuse that access to compromise the confidentiality, integrity, or availability of the organization information.
+
+Malicious insiders who have authorized access to cloud resources can abuse their access to compromise the information available in the cloud. 
+
+Threats include loss of reputation, productivity, and financial theft
+
+Countermeasures:
+o Enforce a strict supply chain management and conduct comprehensive supplier assessment
+o Specify human resource requirements as part of legal contracts
+
+
+▪ Illegal Access to the Cloud Systems
+Weak authentication and authorization controls may lead to unlawful access, thereby compromising confidential and critical data stored in the cloud. 
+
+Countermeasures: 
+o Enforce and adhere to a robust information security (IS) policy. 
+o Permit clients to audit/review the IS policy and procedures of CSPs
+
+
+▪ Loss of Business Reputation Due to Co-tenant Activities
+This threat arises because of the lack of resource and reputational isolation, vulnerabilities in the hypervisors, etc. 
+Resources are shared in the cloud, thus the malicious activity of one co-tenant might affect the reputation of the other, resulting in poor service delivery, data loss, etc. that bring down the reputation of the organization.
+
+Countermeasures:
+o Choose a well-known and efficient CSP to reduce risk and ensure isolation of resources.
+o Check the virtualization and isolation techniques used by the CSP.
+o Assess the risks involved in a multi-tenant architecture
+
+
+▪ Loss of Encryption Keys 
+The loss of encryption keys required for secure communication or systems access provides potential attackers with the possibility to get unauthorized assets.
+
+This threat arises from the poor key management and generation techniques.
+
+Countermeasures: 
+o Do not store the encryption keys alongside the encrypted data. 
+o Use strong algorithms, such as the advanced encryption standard (AES) and Rivest–Shamir–Adleman (RSA), to generate keys.
+o Restrict access to the key stores and implement policies such as role separation to control and manage access to the key stores.
+
+
+▪ Theft of Computer Equipment 
+The theft of equipment may occur owing to inadequate controls on physical parameters, such as smart card access at entry, which may lead to loss of physical equipment and sensitive data. 
+
+Countermeasures: 
+oEnforce physical security measures, such as hiring security guards, closed-circuit television (CCTV) coverage, alarms, identity cards, and proper fencing.
+o Assess the security regularly to make certain changes and maintain the latest physical security measures.
+o Control physical access with the implementation of different sophisticated technologies such as biometric entries.
+
+
+▪ Loss or Modification of Backup Data 
+Attackers might exploit vulnerabilities, such as SQL injection and insecure user behavior (e.g., storing or reusing passwords) to gain illegal access to the data backups in the cloud.
+
+After gaining access, attackers might delete or modify the data stored in the databases.
+
+Lack of data restoration procedures in case of backup data loss puts the service levels at risk.
+
+Countermeasures:
+o Use appropriate data restoration procedures or tools to retrieve lost data. 
+o Avoid relying on one storage method or medium for backup. Instead, deploy the 3-2-1 model.
+
+
+▪ Improper Data Handling and Disposal
+It is difficult to ascertain data handling and disposal procedures followed by CSPs owing to limited access to cloud infrastructure. 
+
+When clients request data deletion, data may not be truly wiped because 
+ 
+o Multiple copies of data are stored, even if they are unavailable. 
+o The disk to be destroyed might also contain the data of other clients. 
+o Multi-tenancy and reuse of hardware resources in the cloud keeps client data at risk
+
+Countermeasures:
+o Use VPNs to secure client data and ensure that data are completely removed from the primary servers along with all replicas.
+o Encrypt the data to make the data unreadable even if the traces are accessed after deletion.
+o Set up a data storage period to hold and dispose the data securely from all the backup devices after obsoletion
+
+
+Cloud Service Misuse 
+▪ Abuse and Nefarious Use of Cloud Services
+The presence of weak registration systems in the cloud-computing environment may allow attackers to create anonymous access to cloud services and perpetrate various attacks, such as password and critical cracking, building rainbow tables, CAPTCHA-solving farms, launching dynamic attack points, hosting exploits on cloud platforms, hosting malicious data, Botnet command or control, and DDoS.
+
+Countermeasures: o Implement a robust registration and validation process. o Monitor client traffic for malicious activities. o Monitor and block malicious networks on public blacklists
+
+
+▪ Undertaking Malicious Probes or Scans
+Malicious probes or scanning allows attackers to collect sensitive information that may lead to loss of confidentiality and integrity, and availability of services and data.
+
+Countermeasures: 
+o Deploy various security mechanisms such as firewalls and intrusion detection systems.
+o Do not place the hypervisor and VMs on the same network.
+
+
+Interface and API Security 
+▪ Insecure Interfaces and APIs Interfaces or APIs enable customers to manage and interact with cloud services.
+
+Cloud service models must be security integrated, and users must be aware of security risks in the use, implementation, and monitoring of such services. 
+
+Insecure interfaces and APIs risks include the following: 
+o Circumvents user-defined policies o Non-credential leakproof 
+o Breach in logging and monitoring facilities
+
+Countermeasures: o Analyze the security model of cloud provider interfaces.
+o Implement secure authentication and access controls. 
+o Encrypt the data in transit and understand the dependency chain associated with APIs.
+
+
+Operational Security 
+
+▪ Insufficient Due Diligence 
+Ignorance of CSP’s cloud environment poses risks in operational responsibilities such as security, encryption, incident response, and more such problems as contractual issues, design, and architectural issues
+
+Countermeasures:
+o Organizations that intend to move to a cloud must extensively research the risks, CSP due diligence, and possess capable resources.
+o Ensure that all the employees are trained regarding security standards and resource maintenance.
+o Ensure that the CSP maintains an incident response plan (IRP) by employing appropriate teams for implementing corresponding security measures during any incident
+
+
+▪ Shared Technology Issues
+IaaS vendors share the infrastructure to deliver services in a scalable way.
+
+Most underlying infrastructure components (e.g., GPU, CPU caches) do not offer substantial isolation properties in a multi-tenant environment.
+
+This enables attackers to attack other machines if they can exploit vulnerabilities in one client’s applications. 
+
+To address this gap, virtualization hypervisors mediate access between guest OSs and the physical resources that might contain loopholes allowing hackers to gain unauthorized control over the underlying platforms.
+
+Countermeasures: 
+o Implement security best practices for installation/configuration.
+o Monitor the environment for unauthorized changes/activity.
+o Promote secure authentication and access control for administrative access and operations
+
+
+▪ Unknown Risk Profile
+Software updates, threat analysis, intrusion detection, security practices, and various other components determine the security posture of an organization.
+Client organizations are unable to get a clear picture of internal security procedures, security compliance, configuration hardening, patching, auditing and logging, etc. because they are less involved with hardware and software ownership and maintenance in the cloud
+
+Countermeasures:
+o Disclosure of applicable logs and data to customers 
+o Partial/full disclosure of infrastructure details (e.g., patch levels, firewalls)
+o Monitoring and alerting of necessary information
+
+
+▪ Unsynchronized System Clocks
+The failure of synchronizing clocks at the end systems can affect the working of automated tasks. 
+
+For example, if the cloud computing devices do not have synchronized or matched times, then timestamp inaccuracy constitutes the network administrator unable to analyze the log files for any malicious activity accurately.
+
+Unsynchronized clocks can cause various other problems; e.g., in case of money transactions or database backups, the mismatched timestamp may result in significant problems or discrepancies.
+
+Countermeasures:
+o Use clock synchronization solutions, such as a network time protocol (NTP).
+o Install a time server within the organization firewall to minimize threats from the outside and maximize the time accuracy on the network.
+o A network time system can also be used to synchronize clocks with an enterprise network server
+
+
+
+▪ Inadequate Infrastructure Design and Planning
+An agreement between the CSP and customer states the quality of service that the CSP offers, such as downtime, physical and network-based redundancies, standard data backup and restore processes, and availability periods. 
+
+At times, CSPs may not satisfy the rapid rise in demand owing to a shortage of computing resources and/or poor network design (e.g., traffic flows through a single point, even though the necessary hardware is available), giving rise to unacceptable network latency or inability to meet agreed service levels. 
+
+Countermeasures: 
+o Forecast the demand and accordingly prepare sufficient infrastructure. 
+o Rely on workloads’ reliability and uptime requirements to plan the usage of the cloud.
+
+
+▪ Conflicts between Client Hardening Procedures and Cloud Environment 
+Certain client hardening procedures may conflict with a CSP environment, making implementation by the client impossible. Because a cloud is a multi-tenant environment the colocation of many customers indeed causes conflicts for the cloud providers, as communication security requirements are likely to diverge between customers.
+
+Countermeasures:
+o Set a clear segregation of responsibilities to define the minimum actions customers must undertake.
+o Ensure that the client organization has proper visibility of its workload, data, and cloud accounts that are affected by the shadow IT problem.
+o Employ cloud VAPT testing periodically at both the client side and CSP side.
+
+
+▪ Cloud Provider Acquisition
+CSP acquisition may increase the probability of tactical shift and affect non-binding agreements at risk. 
+
+This could pose a challenge in handling security requirements. 
+
+Countermeasures:
+o Be tactful when choosing a cloud provider; prefer a reputed and popular CSP to eliminate risk.
+o Verify the data policies offered by CSPs carefully. o Review the security capabilities of the CSP
+
+
+▪ Network Management Failure
+Poor network management leads to network congestion, misconnection, misconfiguration, lack of resource isolation, etc., which affect services and security.
+
+Countermeasures: 
+o Ensure that an adequate security policy is implemented. o Use proactive network management techniques.
+o Keep updating new technologies and analyze what might work better for your organization
+
+
+ Loss of Governance
+In using cloud infrastructure, customers bestow control to CSPs regarding issues that could affect security. 
+
+Furthermore, SLAs may not commit the CSP to provide such services, thus leaving a gap in security defenses. 
+
+This threat results from unclearness of roles and responsibilities, lack of vulnerability assessment processes, conflicting promises in SLAs, lack of certification schemes and jurisdiction, and unavailability of the audit, among others. 
+
+Loss of governance results in noncompliance with security requirements, lack of confidentiality, integrity, and availability of data, poor performance and quality of service, etc. 
+
+Countermeasures:
+o Workout persistent and careful efforts for the execution of SLAs. 
+o Enforce strict governance rules to protect sensitive data and improve performance. 
+o Maintain a unified governance policy for on-premises and cloud operations.
+
+
+▪ Compliance Risks 
+Organizations that seek to obtain compliance with standards and laws may be at risk if the CSP cannot provide evidence of their compliance with the requirements, is outsourcing cloud management to third parties, and/or does not permit audit by the client. 
+
+Compliance risks arise from the lack of governance over audits and industry-standard assessments. 
+
+Thus, clients are unaware of the processes, procedures, and practices of providers regarding accessibility, identity management, and segregation of duties. 
+
+Countermeasures: 
+o Cloud providers should ensure that client data is not compromised.
+o Review the internal audit processes of cloud providers.
+
+
+▪ Economic Denial of Sustainability (EDoS)
+The payment method in a cloud system is “No use, no bill”; when customers make requests, the CSP charges them according to the recorded data, the duration of requests, the amount of data transfer in the network, and the number of CPU cycles consumed.
+
+Economic denial of service destroys financial resources; in the worst case, this could lead to customer bankruptcy or other serious economic impact.
+
+If an attacker engages the cloud server with a malicious service or executes a malicious code that consumes much computational power and storage, the legitimate account holder is charged until the primary cause of CPU usage is detected
+
+Countermeasure:
+o Use a reactive/on-demand, in-cloud EDoS mitigation service (scrubber service) to mitigate application-and network-layer DDoS attacks, making use of the client-puzzle approach
+
+
+▪ Limited Cloud Usage Visibility
+The lack of thorough monitoring and insight into how cloud resources are being used in an organization can significantly impact the organization by hindering its ability to detect unauthorized access, misconfigurations, and potential security incidents, leading to data breaches and compliance issues. 
+
+Attackers can exploit this blind spot to move laterally within a cloud environment, access sensitive information, and execute malicious activities without leaving any traces.
+
+Countermeasures:
+o Deploy cloud-native monitoring and logging solutions to gain real-time insights into cloud usage.
+o Conduct frequent audits and generate detailed reports on cloud activity to identify and address anomalies
+
+
+Infrastructure and System Configuration 
+▪ Natural Disasters 
+Based on geographic location and climate, data centers may be exposed to natural disasters, such as floods, lightning, and earthquakes, which can affect cloud services. 
+
+Countermeasures: o
+Ensure that the organization is located in a safe area.
+o Maintain data backups at different locations. 
+o Implement mitigation measures that help reduce or eliminate your long-term risk from natural disasters.
+
+
+▪ Hardware Failure
+Hardware failures, such as switches, servers, routers, access points, hard disks, network cards, and processors in data centers, can make cloud data inaccessible. 
+
+The majority of hardware failures occur because of hard disk problems. Hard disk failures take a lot of time to track and fix because of their low-level complexities. 
+
+Hardware failure can lead to poor performance delivery to end-users and damage the business.
+
+Countermeasures: 
+o Implement and maintain physical security programs. 
+o Pre-installed standby hardware devices are mandatory.
+o Automate the process of identifying and backing up the required data
+
+
+▪ Supply-Chain Failure
+A supply chain failure can be caused by incomplete and non-transparent terms of use, hidden dependencies created by cross-cloud applications, inappropriate CSP selection, lack of supplier redundancy, etc. 
+
+Cloud providers outsource certain tasks to third parties. 
+
+Thus, the security of the cloud is directly proportional to the security of each link and the extent of dependency on third parties. 
+
+A disruption in the chain may lead to loss of data privacy and integrity, services unavailability, violation of the SLA, economic and reputational losses failing to meet customer demand, and cascading failure. 
+
+Countermeasures: 
+o Define a set of controls to mitigate supply-chain risks. 
+o Develop a containment plan to restrict the damage caused by the failure of a trusted counterparty.
+o Create visibility mechanisms to detect compromised elements of a supply chain
+
+
+▪ Isolation Failure
+Multi-tenancy and shared resources are the characteristics of cloud computing. 
+Strong isolation or compartmentalization of storage, memory, routing, and reputation among different tenants is lacking. 
+Because of isolation failure, attackers attempt to control operations of other cloud customers to gain illegal access to the data
+
+Countermeasure:
+o It is essential to keep the memory, storage, and network access isolated
+
+
+▪ Cloud Service Termination or Failure
+Termination of cloud service because of non-profitability or disputes may lead to data loss, unless end-users protect themselves legally. 
+
+Many factors, such as competitive pressure, lack of financial support, and inadequate business strategies, can lead to termination or failure of the cloud service. 
+
+This threat results in poor delivery and quality of service and loss of investment. 
+
+Furthermore, failures in the services outsourced to the CSP may affect its ability to meet duties and commitments to its customers.
+
+Countermeasures:
+o Ensure that the cloud providers define clear and auditable procedures in case of service termination. 
+This includes guaranteeing the secure transfer of data back to the customer, according to the terms of agreement.
+o Ensure that the CSP had performed a cleansing process of client data such as log and audit files before service termination.
+
+
+▪ Weak Control Plane
+Inadequate security and management of the control plane can hinder comprehensive visibility across cloud operations. 
+
+Attackers can exploit weak control planes to gain control over cloud resources, access sensitive data, and disrupt services.
+
+Countermeasures:
+o Enforce multi-factor authentication (MFA) and strict access controls.
+o Continuously monitor and audit control plane activities to detect and respond to anomalies.
+o Ensure that all APIs used for management are secured and working as expected
+
+
+Network Security 
+▪ Modifying Network Traffic In the cloud, the network traffic may be altered owing to flaws during provisioning or de-provisioning networks, or vulnerabilities in communication encryption.
+
+Modification of network traffic may cause loss, alteration, or theft of confidential data and communications. 
+
+Countermeasure: 
+o Perform network traffic analysis using special tools to find abnormalities, if any.
+
+▪ Management Interface Compromise
+Customer management interfaces of cloud providers facilitate access to a large number of resources over the Internet. 
+
+This enhances security risks, particularly when combined with remote access and web browser vulnerabilities.
+
+Management interface compromise arises from improper configuration, system and application vulnerabilities, remote access to the management interface, etc.
+
+Countermeasures:
+o It is essential to keep the memory, storage, and network access isolated. 
+o Use secure protocols to mitigate threats related to remote access
+. o Regularly update patches to prevent web browser vulnerabilities
+
+▪ Authentication Attacks
+Weak authentication mechanisms (weak passwords, password re-use, etc.) and the inherent limitations of one-factor authentication mechanisms allow attackers to gain unauthorized access to cloud computing systems.
+
+Countermeasures: 
+o Implement strong password policies to keep passwords secure.
+o Enforce two-factor authentication where required.
+o Employ IP whitelisting to thwart unauthorized access by controlling and limiting access
+
+
+▪ VM-Level Attacks
+Cloud computing extensively uses virtualization technologies offered by several vendors, including VMware, Xen, Virtual Box, and vSphere.
+
+Threats to these technologies arise from vulnerabilities in the hypervisors.
+
+Countermeasures:
+o Employ intrusion detection/prevention systems (IDS/IPS) and implement a firewall to mitigate known VM-level attacks.
+o Utilize hypervisors that are highly configured and updated as well as sandboxes around the hypervisors to protect against VM-level attacks
+
+
+▪ Hijacking Accounts
+A highly critical threat to organizations is the compromise of employee accounts on the cloud. 
+
+If an attacker gains access to the cloud by compromising a user account, they can gain access to all information stored on the cloud servers without leaving any trace.
+
+Attackers use techniques such as phishing and password cracking to gain user credentials.
+
+These attacks severely impact business operations causing reputational damage, degradation of brand value, disclosure of sensitive information, etc. 
+
+Countermeasures: 
+o Grant only minimal access privileges to user accounts. 
+o Implement defense-in-depth strategies and install identity and access management (IAM) solutions
+
+
+Governance and Legal Risks 
+▪ Lock-in
+Lock-in reflects the inability of the client to migrate from one CSP to another or in-house systems owing to the lack of tools, procedures, standard data formats, applications, and service portability.
+
+This threat is related to the inappropriate selection of a CSP, incomplete and non-transparent terms of use, lack of standard mechanisms, etc. 
+
+Countermeasures: 
+o Using a standardized cloud API cloud be beneficial. 
+o Employ a multi-cloud or hybrid cloud strategy instead of relying on a single CSP. 
+o Design portable and loosely coupled applications
+
+
+▪ Licensing Risks
+The organization may incur a substantial licensing fee if the CSP charges the software deployed in the cloud on a per-instance basis. 
+
+Therefore, the organization should always retain ownership over its software assets located in the cloud provider environment. 
+
+Risks to licensing occur because of incomplete and non-transparent terms of use. 
+
+Countermeasures:
+o Review the current licensing state of the CSP to develop effective licensing and determine the overall costs.
+o Use one centralized platform to manage the costs, licensing use, etc
+
+
+▪ Risks from Changes of Jurisdiction 
+Clouds may store the customer data in multiple jurisdictions, of which some may be high risk. 
+
+Local authorities in high-risk countries (e.g., countries without the rule of law, with an unpredictable legal framework and enforcement or autocratic police states) could raid data centers; the data or information system could be subjected to enforced disclosure or seizure. 
+
+Changes in the jurisdiction of data may lead to the blockage or impoundment of the information system by the government or other organizations.
+
+Customers should consider jurisdictional ambiguities before adopting a cloud, as local laws for data storage could provide government access to private data.
+
+Countermeasure: 
+o Gain insight about the jurisdictions under which data may be stored and processed, and assess the corresponding risks, if any.
+
+
+▪ Subpoena and E-Discovery 
+Customer data and services are subjected to a cease request from authorities or third parties.
+
+This threat occurs owing to improper resource isolation, data storage in multiple jurisdictions, and lack of insight on jurisdictions. 
+
+Countermeasures: 
+o Carefully select the CSP and ensure proper security is provided.
+o Thoroughly review the service agreement. 
+It should address records management, accessibility, customer support, legal policies, accountability, confidentiality, length of the agreement, termination procedures, etc
+
+
+Development and Resource Management 
+▪ Privilege Escalation 
+Mistakes in the access allocation system, such as coding errors and design flaws, can result in a customer, third party, or employee obtaining more access rights than required.
+
+This threat arises because of authentication, authorization, and accountability vulnerabilities, user-provisioning and de-provisioning vulnerabilities, hypervisor vulnerabilities, unclear roles and responsibilities, misconfiguration, etc.
+
+Countermeasures: 
+o Employ a good privilege separation scheme.
+o Update software programs on a regular basis to fix the newly discovered privilege escalation vulnerabilities, if any.
+
+
+▪ Insecure Software Development Practices
+Insecure software development practices may include inadequate testing, using weak coding standards, implementing insufficient access controls, and ignoring best practices for data protection. 
+
+These practices can introduce new vulnerabilities that attackers can exploit to gain illegal access, steal sensitive data, or disrupt cloud services.
+
+Such weaknesses provide easy entry points for cybercriminals, leading to potential data breaches and significant financial and reputational damage to organizations.
+
+Countermeasures: 
+o Integrate security by adopting SDLC at every stage of the development process.
+
+
+ Resource Exhaustion
+Resource exhaustion can occur when computing resources such as CPU, memory, disk space, or network bandwidth are fully consumed, leaving no capacity for legitimate users or operations. 
+
+This can significantly impact an organization, as it causes system slowdowns, service outages, and an inability to perform critical functions, leading to revenue loss and reputational damage.
+
+In addition, attackers can leverage resource exhaustion to launch DDoS attacks or other resource-intensive activities to disrupt services or cause system failures.
+
+Countermeasures:
+o Continuously monitor resource usage and set up alerts for abnormal consumption.
+o Implement auto-scaling and load balancing to automatically adjust resources based on demand and distribute workloads to prevent overloads
+
+
+▪ Lack of Security Architecture
+Most of the companies are migrating their IT capabilities to the public cloud, so incorporating appropriate security strategies to thwart against cyber threats is a major challenge. 
+
+It is important to develop appropriate security architectures and strategies before migrating IT infrastructure to the cloud.
+
+Countermeasures:
+o Ensure your security architecture aligns with your business goals and objectives.
+o Update the threat model regularly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
