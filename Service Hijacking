@@ -1,0 +1,41 @@
+In account or service hijacking, an attacker steals the credentials of a CSP or a client by phishing, pharming, social engineering, and exploitation of software vulnerabilities. 
+
+Using the stolen credentials, the attacker gains access to the cloud computing services and compromises data confidentiality, integrity, and availability.
+
+Social engineering is a nontechnical kind of intrusion that relies heavily on human interaction and often involves tricking others to break routine security procedures.
+
+Attackers might target CSPs to reset passwords or IT staff to access their cloud services to reveal passwords. 
+
+Other ways to obtain passwords include password guessing, keylogging malware, implementing password-cracking techniques, and sending phishing emails.
+
+Social engineering attacks result in exposed customer and credit card data, personal information, business plans, staff data, identity theft, etc.
+
+the attacker first creates a fake cloud service login page and sends a malicious link to the cloud service user. 
+
+The user, on receiving the link, clicks on it and enters his/her login credentials, failing to notice it is a fake login page.
+
+When the user hits enter, the attacker receives the login credentials of the user, while the page automatically redirects him to the original cloud service login page.
+
+Now, the attacker uses the stolen user credentials to log in to the cloud service and perform malicious activity
+
+Countermeasures: 
+▪ Do not share account credentials between users and services. 
+▪ Implement a robust two-factor or multi-factor authentication mechanism wherever possible.
+▪ Train the staff to recognize social engineering attacks. 
+▪ Strictly follow the security policies framed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
