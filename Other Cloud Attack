@@ -1,0 +1,165 @@
+Session Hijacking using Cross-Site Scripting (XSS) Attack 
+Attackers implement XSS to steal cookies used in the user authentication process; this involves injecting a website with malicious code, which is subsequently executed by the browser.
+
+Using the stolen cookies, attackers exploit active computer sessions, thereby gaining unauthorized access to data
+
+Countermeasures:
+o Using secure socket layers (SSL), firewalls, antiviruses, and code scanners can safeguard a cloud from session hijacking
+
+
+Session Hijacking using Session Riding 
+Attackers exploit websites by engaging in cross-site request forgeries to transmit unauthorized commands.
+
+In session riding, attackers “ride” an active computer session by sending an email or tricking users into visiting a malicious webpage during login to an actual target site. 
+
+When users click the malicious link, the website executes the request as if the user had already authenticated it.
+
+Commands used include modifying or deleting user data, performing online transactions, resetting passwords, etc
+
+the user logs into the trusted site and creates a new session. 
+The server stores the session identifier for the session in a cookie in the web browser. 
+The attacker lures the victim to visit a malicious website set up by him/her. 
+The attacker then sends a request to the cloud server from the user’s browser using a stolen session cookie.
+
+Countermeasures:
+o Do not allow your browser and websites to save login details. 
+o Check the HTTP referrer header and, when processing a POST, ignore URL parameters
+
+
+ Domain Name System (DNS) Attacks
+A DNS server translates a human-readable domain name (e.g., www.google.com) into a numerical IP address that routes communications between nodes.
+Attackers perform DNS attacks to obtain authentication credentials from Internet users.
+
+Types of DNS Attacks:
+o DNS Poisoning: Involves diverting users to a spoofed website by poisoning the DNS server or the DNS cache on the user’s system.
+o Cybersquatting: Involves conducting phishing scams by registering a domain name that is similar to a CSP.
+o Domain Hijacking: Involves stealing a CSP domain name. o Domain Snipping: Involves registering an elapsed domain name.
+
+the attacker performs DNS cache poisoning, directing users to a fake website. 
+
+Here, the user queries the internal DNS server for DNS information (e.g., the IP address of www.xCloud.com).
+
+The internal DNS server then asks the respective cloud server for DNS information. 
+
+At this point, the attacker blocks the DNS response from the cloud server and sends a DNS response with the IP of a fake website to the internal DNS server. 
+
+Thus, the internal DNS server cache updates itself with the IPs of counterfeit websites and automatically directs users to these websites.
+Countermeasures:
+o Using domain name system security extensions (DNSSEC) reduces the effects of DNS threats to some extent.
+
+
+ SQL Injection Attacks
+SQL is a programming language meant for database management systems.
+In an SQL injection attack, attackers target SQL servers running vulnerable database applications. 
+
+Attackers insert malicious code (generated using special characters) into a standard SQL code to gain unauthorized access to a database and ultimately to other confidential information. 
+
+Such attacks are generally performed when applications use the input to construct dynamic SQL statements.
+
+Furthermore, attackers can manipulate the database contents, retrieve sensitive data, remotely execute system commands, or even take control of the webserver for additional criminal activities
+Countermeasures: o Use filtering techniques to sanitize the user input. o Validate input length, range, format, and type. o Regularly update and patch servers and application
+
+
+ Man-in-the-Browser Attack
+Man-in-the-Browser attacks target a user’s web-browser by injecting sophisticated malware (e.g., bots) that allow attackers to monitor information being shared between the user’s browser and cloud application. 
+
+The injected code exfiltrates the user’s login credentials, such as username and passwords, to the attackers.
+
+Then, the attackers can validate those credentials on the cloud server and perform malicious activities on behalf of the user without the user being aware of it.
+
+Countermeasures:
+o Limit access to the cloud services to safeguard the network against illegitimate access.
+o Integrate the cloud-based solution with controlled intrusion detection systems to detect and notify of abnormal user activities
+
+
+Metadata Spoofing Attack 
+Cloud service metadata describe the details of various services, such as the location of network components, security requirements, and data formats. 
+
+Metadata spoofing is a process of changing or modifying service metadata written in the web service definition language (WSDL) file, where the information regarding service instances is stored. 
+
+Once the manipulated file is successfully deployed, cloud users are redirected to unknown places, which is similar to the process of DNS spoofing.
+
+Countermeasures: o Encrypt and store application and service details on the cloud. o Implement hash-based integrity checking to mitigate spoofing attacks
+
+
+Multi Cloud Attack
+
+In multi-cloud attacks, attackers leverage vulnerabilities across multiple cloud service providers (CSPs) that an organization uses. 
+
+This includes exploiting misconfigurations, weak access controls, or compromised credentials to gain unauthorized access to different cloud environments.
+
+Once attackers successfully gain access, they move laterally between cloud services by exploiting inter-cloud APIs or network bridges. 
+
+Attackers later attempts to manipulate various resources to perform malicious activities, such as data exfiltration, malware deployment, and establishing persistent access. 
+
+This process significantly compromises the security and integrity of the multi-cloud infrastructure
+
+Countermeasure
+o Use secure APIs and encrypted channels for communication between different cloud services.
+o Ensure that access control models are standardized across all cloud providers to prevent potential security gaps.
+o Implement an additional security layer beyond passwords, requiring two or more verification factors for access
+
+
+Privilege Escalation with the CSR API
+Certificate signing requests (CSR) API in Kubernetes manages certificate signing requests that are requested to certificate authority for a specific purpose.
+
+Attackers can exploit vulnerabilities in the CSR API to gain unauthorized access to privileges within the Kubernetes cluster.
+
+During this attack, the attacker creates a CSR that requests a certificate from a service account or user with elevated permissions. 
+
+After the CSR is successfully created, the attacker leverages poorly configured security controls to obtain the CSR approval, which forces Kubernetes to issue the certificate.
+
+Attackers then use the issued certificate for authenticating an entity that has elevated permission granted by the approved CSR
+
+Countermeasures
+o Enable Kubernetes auditing on every cluster and monitor events related to CSR API.
+o Enforce strict RBAC policies to ensure that only authorized users have permission to create, approve, and manage CSRs.
+o Avoid automated CSR approvals. Instead, manually review and approve each CSR to ensure it is legitimate
+
+
+Privilege Escalation by Abusing Elevation Control Mechanism
+The elevated cloud mechanism, also known as just-In-time (JIT) access, is a security model and access management service that allows users to obtain temporary permission for specific tasks or operations within a defined timeframe. 
+
+Cloud environments provide administrators with access controls, enabling granular permissions such as just-in-time access, impersonation, resource role assignment, and temporary role access. 
+
+Attackers can abuse these permission configurations to gain unauthorized or temporarily elevated access to cloud resources.
+
+By leveraging these techniques, attackers can infiltrate cloud environments and exploit their resources.
+
+For example, in AWS, attackers with PassRole permission can enable a service they create to assume a role by granting elevated privileges beyond their original scope. 
+
+Similarly, in GCP, users with the iam.serviceAccountUser role can attach a service account to a resource, thereby accessing privileged accounts. 
+
+These techniques allow attackers to gain unauthorized access to cloud resources, leading to potential data breaches, service disruptions, financial losses, and regulatory noncompliance.
+
+Countermeasures
+o Limit cloud account privileges to only the necessary roles, policies, and permissions required for their tasks, including assuming and impersonating additional roles.
+o Implement manual approval for temporary elevation of privileges when just-in-time access is enabled.
+o Segment and isolate critical cloud resources to limit the potential impact of compromised accounts and reduce the attack surface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
