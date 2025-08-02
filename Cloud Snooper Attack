@@ -1,0 +1,45 @@
+Cloud snooper attacks are triggered at AWS security groups (SGs) to compromise the target server and extract sensitive data stealthily. 
+
+Attackers perform this attack by leveraging a weakly configured firewall or any underlying vulnerabilities. 
+
+Attackers use various techniques to bypass security controls such as firewalls and gain remote control over the target server.
+
+Attackers exploit a weakness in SGs, which are intended to allow only the traffic with destination ports 80 or 443. 
+
+Attackers install rootkits either by exploiting weaknesses in traffic filters, supply-chain attacks, or brute-forcing SSH.
+
+Attackers transmit their command and control (C2) packets masquerading as legitimate traffic.
+
+Then, the installed rootkit intercepts the packets and redirects the commands to the backdoor Trojan. 
+
+The Trojan executes the malicious activities according to the C2 commands received from the remote machine.
+
+Steps Involved in a Cloud Snooper Attack: 
+▪ Step 1: Attackers send specially created C2 packets along with normal traffic to the target server with destination ports 80 and 443, fooling the perimeter firewall.
+▪ Step 2: The firewall verifies all incoming packets and allows them to pass as all the packets contain 80 and 443 as the destination ports.
+▪ Step 3: Now, the listener in the rootkit intercepts traffic towards the server and recreates the packets with source ports 1010, 2020, 6060, 7070, 8080, or 9999. 
+The listener then transmits those packets to the backdoor installed by the rootkit.
+▪ Step 4: The backdoor Trojan now performs actions according to the C2 commands and sends the data back to the rootkit after collecting from the target server.
+Step 5: The rootkit again reconstructs the received packets with the source ports 80 and 443 to bypass the firewall and exfiltrate data to the attacker. Here, the firewall is again fooled by the rootkit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
