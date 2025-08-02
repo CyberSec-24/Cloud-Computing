@@ -1,0 +1,32 @@
+ Golden SAML attacks are performed to target identity providers on cloud networks such as the Active Directory Federation Service (ADFS), 
+which utilizes the SAML protocol for the authentication and authorization of users
+
+• Attackers initially gain administrative access to the identity provider’s user profile and exploit token signing certificates to generate forged SAML tokens or responses by manipulating the SAML assertion
+
+Golden SAML Attack Scenario
+▪ Step 1: An attacker gains access to the ADFS server (identity provider) and steals the certificate and encryption key that signs the assertion.
+▪ Step 2: When a user attempts to access the required service, the service provider redirects the request to the identity provider.
+▪ Step 4: The attacker intercepts the redirect request and sends back the SAML response with forged assertion values using the stolen keys.
+▪ Step 5: Then, the service provider allows the attacker to access federated services associated with the target user account.
+
+
+Countermeasures:
+▪ Constantly monitor user activities. 
+▪ Utilize multi-factor authentication and strong passwords. 
+▪ Implement least-privilege access
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
