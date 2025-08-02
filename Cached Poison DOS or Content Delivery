@@ -1,0 +1,40 @@
+In a CPDoS or CDN cache poisoning attack, attackers create malformed or oversized HTTP requests to trick the origin web server into responding with malicious or error content, which can be cached at the content delivery network (CDN) servers. 
+
+Therefore, the malicious or error-based content is cached in the CDN server, which delivers it to legitimate users, resulting in a DoS attack on the target network.
+
+A CPDoS attack can occur because of misconfiguration of CDN-protected servers, which results in the storage of web content or pages with error responses from the origin server.
+
+Attackers can use cache poisoning techniques to prevent users from accessing cloud services.
+
+A web page or server can become unreachable even if a single HTTP request is cached and poisoned.
+
+This attack allows attackers to compromise the target website’s online service functionalities.
+
+Steps for CDN Cache Poisoning to Perform a DoS Attack 
+▪ Step 1: An attacker requests a resource from the target web server by submitting a request containing a malicious HTTP header.
+▪ Step 2: If the intermediary CDN server does not have a cache of the requested webpage or resource, the request is forwarded to the origin web server, which returns an error because the request is malicious.
+▪ Step 3: The error page is cached instead of the genuine one at the CDN server.
+▪ Step 4: Now, instead of the original web page, users receive a cached error page such as “404 Not Found” whenever they attempt to access the resource
+▪ Step 5: The CDN server also broadcasts the same error page across other connected users, making legitimate services unreachable to them
+
+
+Countermeasures: 
+▪ Configure the CDN to avoid the caching of HTTP error pages.
+▪ Implement a web application firewall (WAF).
+▪ Monitor and eliminate error pages from the cache.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
