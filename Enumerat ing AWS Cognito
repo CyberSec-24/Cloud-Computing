@@ -1,0 +1,42 @@
+AWS Cognito is a service provided by Amazon Web Services that streamlines the authentication, authorization, and user management of web and mobile applications. 
+
+It supports user pools for sign-up and sign-in functionalities and identity pools to create unique user identities and authorize users to access various AWS services. 
+
+Enumerating AWS Cognito involves gathering information about users and their attributes within AWS Cognito user and identity pools. 
+
+This process includes discovering user accounts, attributes, and other related information that can be exploited. 
+
+Attackers can leverage the enumerated information to perform attacks such as phishing, brute-force attacks, social engineering, data theft, service disruptions, and credential stuffing
+
+Enumerating User Pools0
+▪ Run the following command to list all user pools. aws cognito-idp list-user-pools
+
+▪ Run the following command to view detailed information about a specific Amazon Cognito user pool. aws cognito-idp describe-user-pool --user-pool-id <UserPoolId>
+
+Enumerating Identity Pools 
+▪ Run the following command to list all identity pools. aws cognito-identity list-identity-pools
+
+▪ Run the following command to view detailed information about a specific Amazon Cognito identity pool. aws cognito-identity describe-identity-pool --identity-pool-id <IdentityPoolId>
+
+Checking for Existing Users 
+▪ Run the following command to sign up for a new user and check whether a similar username already exists.
+aws cognito-idp sign-up --client-id <ClientId> --username <username> --password <password> --user-attributes Name=email,Value=<email> 
+
+Each command requires appropriate AWS permissions: 
+▪ For User Pools: “cognito-idp:ListUserPools” “cognito-idp:DescribeUserPool”
+▪ For Identity Pools: “cognito-identity:ListIdentityPools” “cognito-identity:DescribeIdentityPool”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
