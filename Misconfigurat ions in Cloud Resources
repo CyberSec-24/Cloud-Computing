@@ -1,0 +1,41 @@
+CloudSploit is a tool designed to identify misconfigurations and security risks across a wide range of cloud resources and can assist in gaining access to cloud resources. 
+
+CloudSploit also supports mapping its plugins to particular compliance policies such as the HIPAA, and CIS Benchmarks
+
+. CloudSploit generates detailed reports outlining potential security issues.
+
+An attacker analyzes these reports to identify specific vulnerabilities that can be exploited to gain access and perform lateral movements within the target cloud environment.
+
+
+Steps to Identify Misconfigured Cloud Resources using CloudSploit 
+▪ Set up the cloud provider's credentials and configuration file containing the credentials of the targeted cloud service: Configuration file format for AWS:
+{
+"accessKeyId": "YOURACCESSKEY", "secretAccessKey": "YOURSECRETKEY"
+}
+
+Configuration file format for Azure:
+{
+"ApplicationID": "YOURAZUREAPPLICATIONID", "KeyValue": "YOURAZUREKEYVALUE", "DirectoryID": "YOURAZUREDIRECTORYID", "SubscriptionID": "YOURAZURESUBSCRIPTIONID"
+} 
+
+Configuration file format for GCP: 
+{
+"type": "service_account", "project": "GCPPROJECTNAME", "client_email": "GCPCLIENTEMAIL", "private_key": "GCPPRIVATEKEY"
+}
+▪ Run the following command to perform a standard scan:
+./index.js
+
+▪ Run the following commands to perform a compliance mapping on the target cloud service:
+For HIPAA scan mapping: ./index.js --compliance=hipaa For PCI scan mapping: ./index.js --compliance=pci For CIS Benchmarks scan mapping: ./index.js --compliance=cis
+
+▪ Run the following command to get the output results in plain text instead of the tabular format on the console: ./index.js --console=text
+
+▪ Run the following command to print a table on the console and save a CSV file: ./index.js --csv=file.csv --console=tabl
+
+
+
+
+
+
+
+
