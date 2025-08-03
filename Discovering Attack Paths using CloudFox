@@ -1,0 +1,44 @@
+CloudFox is a command-line tool that allows attackers to identify exploitable attack paths within targeted cloud environments such as AWS, Azure, and GCP.
+
+Attackers can use this tool to identify critical vulnerabilities and misconfigurations in AWS. 
+
+This helps attackers obtain details regarding which regions an AWS account is utilizing, along with a list of resources associated with that account. 
+
+CloudFox scans secrets hidden in EC2 user data, service-specific environment variables, workloads with administrative permissions, role trusts, host names, IPs, and file systems in the targeted AWS infrastructure. 
+
+Furthermore, the tool helps in detecting overpermissive policies, finding exposed endpoints, and identifying privilege escalation opportunities. 
+
+Attackers can execute the following command in the AWS CLI to perform automated enumeration against a targeted AWS environment to determine exploitable attack paths:
+cloudfox aws --profile <profile-name> all-checks
+
+The above command provides comprehensive details of potential security misconfigurations and attack paths within a specified AWS environment. 
+
+It generates loot files containing enumerated information, including misconfigurations within the AWS environment, which can be directly used to exploit the identified attack paths and vulnerabilities
+
+Alternatively, attackers can use the following AWS commands to find exploitable attack paths in an AWS environment using CloudFox: 
+▪ access-keys: Enumerates active access keys for all users. cloudfox aws --profile <profile-name> -v2 access-keys
+
+▪ buckets: Displays buckets in the account and provides commands for inspecting them. cloudfox aws --profile <profile-name> -v2 buckets
+
+▪ ecs-tasks: Returns the ECS tasks and associated cluster, task definition, container instance, launch type, and associated IAM principal. cloudfox aws -p <profile-name> ecs-tasks -v2
+
+▪ elastic-network-interfaces: Identifies all elastic network interfaces, including the eni ID, type, external IP, private IP, VPCID, attached instance, and description. cloudfox aws -p <profile-name> eni -v2
+
+▪ endpoints: Enumerates vulnerable endpoints from various services. cloudfox aws --profile <profile-name> -v2 endpoints
+
+▪ permissions: Lists all IAM permissions available to a principal, except for resource-based permissions. cloudfox aws --profile <profile-name> permissions -v2
+
+▪ secrets: Displays secrets from SecretsManager and SSM. cloudfox aws --profile <profile-name> -v2 secrets
+
+▪ workloads: Identifies workloads with admin permissions or a path to admin permissions. cloudfox aws --profile <profile-name> workloads
+
+
+
+
+
+
+
+
+
+
+
