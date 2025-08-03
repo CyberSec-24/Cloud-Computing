@@ -1,0 +1,81 @@
+
+
+Attackers use S3Scanner to identify open S3 buckets of cloud services such as Amazon AWS and retrieve their content for malicious purposes. 
+
+S3 buckets store information in the form of files, folders, and objects, which include text files, images, videos, and PDF files; in some scenarios, they even store backup files and credentials.
+
+S3Scanner allows attackers to retrieve objects and access control list (ACL) information, including read and write permissions.
+
+▪ Run the following command to scan a single bucket s3scanner -bucket <filename>
+
+▪ Run the following command to scan all bucket names listed in a file s3scanner -bucket-file <filename>.txt -enumerate
+
+▪ Run the following command to scan each bucket name listed in the file s3scanner -bucket-file names.txt
+
+▪ Run the following S3Scanner command to scan the buckets listed in a file with eight threads: s3scanner -bucket <filename> -threads 8
+
+
+
+Enumerating S3 Bucket Permissions using BucketLoot
+
+Attackers use BucketLoot, an automated S3-compatible bucket inspector, to enumerate and check the permissions for Amazon S3 buckets. 
+
+This helps attackers identify misconfigured S3 buckets that may be publicly accessible or have overly permissive policies, posing potential risks. 
+
+BucketLoot can also extract all URLs/subdomains and domains present in an exposed storage bucket, enabling attackers to identify hidden endpoints.
+
+Commands to enumerate and analyze S3 bucket permissions: 
+▪ Run the following command to list buckets that may be publicly accessible
+python bucketloot.py -l <file_with_bucket_names>
+
+▪ Run the following command to check the permissions of the listed buckets 
+python bucketloot.py -c <file_with_bucket_names>
+
+▪ Run the following commands to download the data from publicly accessible buckets 
+python bucketloot.py -d <file_with_bucket_names>
+
+
+
+Enumerating S3 Buckets using CloudBrute
+
+CloudBrute enables attackers to find a target company’s infrastructure, files, and apps on the top cloud providers 
+such as Amazon, Google, Microsoft, DigitalOcean, Alibaba, Vultr, and Linode. It enables cloud detection of the IPINFO API and source code. 
+
+This further helps attackers to enumerate the AWS S3 buckets of cloud users and perform proxy randomization. 
+
+This tool also enables attackers to initiate dictionary or brute-force attacks to discover cloud resources. 
+
+Enumerating the cloud infrastructure is the process of systematically testing publicly accessible cloud resources across various cloud service providers (CSPs). 
+
+CloudBrute enables attackers to discover cloud asset names by brute forcing service names and endpoints based on wordlists.
+
+Steps to Enumerate S3 Buckets using CloudBrute
+
+The following steps are used to enumerate S3 buckets of a target domain or organization (e.g., Facebook) using CloudBrute:
+
+▪ After configuring CloudBrute, run the following command to navigate to the specific CloudBrute directory: cd Cloudbrute
+
+▪ Next, run the following command to brute force, generate, and validate the target buckets: 
+./cloudbrute -d <target.com> -k <keyword> -t 80 -T 10 -w /<path_to_wordlist>.txt 
+
+Where, -d amazon.com: Specifies the target bucket hosting domain; here, "amazon.com".
+
+-k facebook: Sets the keyword or pattern to search for within the target domain, here "facebook". 
+
+-t 80: Specifies the threads, here 80.
+
+-T 10: Sets the timeout option.
+
+-w bucket_list.txt: Specifies the wordlist file to use for the attack; here, "bucket_list.txt".
+
+Alternatively, you can also search for Azure buckets by changing the -d parameter to microsoft.com and for GCP buckets with google.com
+
+
+
+
+
+
+
+
+
+
