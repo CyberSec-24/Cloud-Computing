@@ -1,0 +1,45 @@
+The DNS records for AWS accounts are critical for managing domain names and directing traffic to appropriate resources within the AWS infrastructure. 
+
+These records include A, CNAME, MX, and TXT records, which map domain names to IP addresses, define mail server routes, and provide verification for services such as Amazon Route 53.
+
+Enumerating the DNS records of AWS accounts allows attackers to uncover valuable information about the infrastructure, such as IP addresses, subdomains, and mail servers.
+
+Obtaining insights into the DNS setup enables attackers to map the network, find potential entry points, exploit misconfigurations or exposed services, and gain unauthorized access to AWS resources. 
+
+Tools such as nslookup, dig, and Ghostbuster can help attackers identify the DNS records of AWS accounts
+
+▪ Ghostbuster 
+Attackers use the Ghostbuster tool to gather all DNS records from targeted AWS accounts, specifically those managed through Amazon Route 53. 
+
+It imports DNS records from a CSV file or directly from Cloudflare. 
+
+Ghostbuster dynamically iterates through each AWS profile configured in .aws/config or .aws/credentials for all AWS regions, pulling subdomain records from AWS Route 53 and Cloudflare, and cross-checking these DNS records with the IPs owned by the organization to detect potential takeovers. 
+
+Attackers can execute the following command to enumerate the DNS records of a targeted AWS account using GhostBuster: 
+ghostbuster scan aws --profile < AWS CLI profile name>
+
+Ghostbuster leverages information publicly available via AWS Route 53 to gather DNS records. 
+
+However, specific permissions are required to access certain DNS records depending on the security configurations and policies set within the AWS account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
