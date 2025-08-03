@@ -1,0 +1,25 @@
+Cartography is a Python-based tool for mapping and understanding the security posture of various cloud platforms, such as AWS, GCP, Oracle Cloud Infrastructure, Microsoft Azure, and Okta. 
+
+It ingests data from cloud infrastructure, IAM policies, and network configurations to build a comprehensive graph view. 
+
+Attackers can leverage this to identify relationships and dependencies, discover misconfigurations, and pinpoint potential vulnerabilities for exploitation. 
+
+By visualizing the interconnected components, Cartography aids in recognizing attack paths and privilege escalation opportunities. 
+
+Examples of Discovering Attack Paths in AWS 
+
+▪ Run the following command to identify RDS instances installed on the current AWS account:
+MATCH (aws:AWSAccount)-[r:RESOURCE]->(rds:RDSInstance) return *
+
+The above requests Neo4j to identify all the [:RESOURCE] relationships from AWSAccounts to RDSInstances and return the nodes and :RESOURCE relationships
+
+
+▪ Run the following command to identify RDS instances with encryption turned off:
+MATCH >(rds:RDSInstance{storage_encrypted:false}) RETURN a.name, rds.id
+
+▪ Run the following command to identify EC2 instances that are directly exposed to the Internet: 
+MATCH (instance:EC2Instance{exposed_internet: true}) RETURN instance.instanceid, instance.publicdnsname
+
+The instances shown in the above screenshot are open to the Internet either through permissive inbound IP permissions defined on their EC2 Security Groups or their network interfaces.
+
+
