@@ -1,0 +1,30 @@
+Cloudsplaining is a tool used to analyze AWS Identity and Access Management (IAM) policies to identify potential security risks and vulnerabilities. 
+
+This allows attackers to identify weak or violated AWS IAM policies, which can be leveraged to perform privilege escalation, resource modification, and data exfiltration. 
+
+Cloudsplaining generates detailed HTML reports, highlighting excessive permissions.
+
+Steps for Enumerating Weak IAM Policies 
+
+▪ Step 1: Use the AWS CLI to retrieve detailed information about the IAM policies attached to users, groups, and roles:
+aws iam get-account-authorization-details --output json > account-auth-details.json
+This command fetches IAM policy details and exports them into a JSON file named “account-auth-details.json.”
+
+▪ Step 2: Run the following Cloudsplaining command to scan and analyze the exported IAM policies and generate a report: 
+cloudsplaining scan --input-file account-auth-details.json --output ./cloudsplaining-report 
+This command scans the account-auth-details.json file and outputs the analysis report in the specified directory
+
+
+Step 3: Navigate to the output directory and open the generated report in a web browser to view the identified weak IAM policies
+
+
+
+
+
+
+
+
+
+
+
+
