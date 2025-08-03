@@ -1,0 +1,43 @@
+• Masscan is particularly useful for identifying open ports and services running on cloud infrastructure, enabling quick discovery of exposed services that may be vulnerable to exploitation
+
+• Masscan can be configured to scan specific IP addresses or ranges, allowing attackers to target cloud service providers such as AWS, Azure, or Google Cloud
+
+Masscan is a network port scanner designed to scan large networks and the entire Internet within minutes. 
+
+It is particularly useful for identifying open ports and services running on a cloud infrastructure.
+
+By leveraging their scanning capabilities, attackers can quickly discover services that may be vulnerable to exploitation. 
+
+Masscan can be configured to scan specific IP addresses or ranges, allowing attackers to target cloud service providers, such as AWS, Azure, or Google Cloud.
+
+
+Identifying Open Ports using Masscan
+▪ Run the following Masscan command to scan the target IP address for open ports:
+sudo masscan -p0-65535 <target_IP_address> --rate=<rate> 
+o -p0-65535: Scans all ports from 0 to 65535. 
+o <target_IP_address>: Replace with the target IP address.
+o --rate=<rate>: Sets the rate of packets per second
+
+
+▪ Run the Masscan command with ‘-oX’ or ‘-oJ’ option to save the scan results and specify the output file format and file name as follows:
+sudo masscan -p0-65535 <target_IP_address> --rate=<rate> -oX <scan_results>.xml or
+sudo masscan -p0-65535 <target_IP_address> --rate=<rate> -oJ scan_results.json
+o -oX <scan_results>.xml: Saves the scan results in the XML format to a given file name.
+o -oJ <scan_results>.json: Saves the scan results in JSON format to a given filename
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
