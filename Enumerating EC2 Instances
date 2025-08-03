@@ -1,0 +1,74 @@
+Amazon EC2 (Elastic Compute Cloud) is a web service that provides resizable computing capacity in the cloud and is designed to make web-scale cloud computing easier for developers.
+
+It offers a range of instance types optimized for different use cases by combining varying CPU, memory, storage, and networking capacities. 
+
+To enumerate the target AWS EC2 instances, attackers require access to an EC2 instance to run the following enumeration commands on the targeted AWS cloud service
+
+▪ Run the following command to list EC2 instances in the target cloud:
+aws ec2 describe-instances
+
+▪ Run the following command to check if they use Metadata API version 1 (easier to exfiltrate access keys):
+aws ec2 describe-instances --filters Name=metadata-options.http-tokens,Values=optional
+
+▪ Run the following command to obtain the target user data of instances and search for secrets:
+aws ec2 describe-instance-attribute --instance-id <id> --attribute userData --output text --query "UserData.Value" | base64 --decode
+
+▪ Run the following command to list out the volumes: 
+aws ec2 describe-volumes
+
+▪ Run the following command to list out the available snapshots and check whether any volume is public:
+aws ec2 describe-snapshots
+
+▪ Run the following command to list out the security groups: 
+aws ec2 describe-security-groups
+
+▪ Run the following command to list security groups that allow SSH from the Internet:
+aws ec2 describe-security-groups  --filters Name=ip-permission.from-port,Values=22  Name=ip-permission.to port,Values=22 Name=ip-permission.cidr,Values='0.0.0.0/0'
+
+▪ Run the following command to list out the EC2 instances that are part of the fleet:
+aws ec2 describe-fleet-instances
+
+▪ Run the following command to view details about existing fleets:
+aws ec2 describe-fleets
+
+▪ Run the following command to list out dedicated hosts: 
+aws ec2 describe-hosts
+
+▪ Run the following command to list out profile associations for each IAM instance:
+aws ec2 describe-iam-instance-profile-associations
+
+▪ Run the following command to determine the role allocated to an instance profile:
+aws iam get-instance-profile --instance-profile-name <profile name>
+
+▪ Run the following command to list out names of SSH keys:
+aws ec2 describe-key-pairs
+
+▪ Run the following command to list out different gateways:
+aws ec2 describe-internet-gateways 
+aws ec2 describe-local-gateways 
+aws ec2 describe-nat-gateways
+aws ec2 describe-transit-gateways 
+aws ec2 describe-vpn-gateways
+
+▪ Run the following command to list the details of VPCs:
+aws ec2 describe-vpcs
+
+▪ Run the following command to list out subnets: 
+aws ec2 describe-subnets
+
+▪ Run the following command to list out all the VPC endpoints:
+aws ec2 describe-vpc-endpoints
+
+▪ Run the following command to list out allowed connections between VPC pairs:
+aws ec2 describe-vpc-peering-connections
+
+
+
+
+
+
+
+
+
+
+
