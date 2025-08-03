@@ -1,0 +1,76 @@
+Identifying target cloud environments involves recognizing and profiling the cloud infrastructure used by an organization such as AWS, Microsoft Azure, or GCP.
+
+This step is crucial for attackers because it helps them understand the specific technologies, services, and configurations deployed by the target. 
+
+In addition, gathering information about the target cloud environment allows attackers to tailor their methods and effectively exploit cloud-specific vulnerabilities and misconfigurations. 
+
+Attackers can use tools such as Shodan and Censys to gather detailed information about a target's cloud infrastructure
+
+Search for AWS services 
+ssl.cert.issuer.cn:Amazon
+Obtains information on SSL certificates issued by Amazon that can help identify services hosted by AWS.
+
+
+Search for cloud region
+cloud.region:<Region_code> 
+This narrows the search results to a specific geographic region within the infrastructure of the cloud provider.
+
+
+▪ Search for Microsoft devices and services
+org:Microsoft
+Obtains information about devices and services belonging to Microsoft that can be useful for identifying Azure-hosted infrastructure.
+
+
+▪ Search for Kubernetes 
+product:Kubernetes
+Obtains information on instances of Kubernetes.
+
+
+▪ Search for AWS services
+org:Amazon
+Obtains information on services hosted specifically on Amazon’s infrastructure, which also reveals AWS-hosted services.
+
+
+▪ Search for Azure-hosted services
+ssl.cert.subject.cn:azure
+Obtains information on SSL certificates that mention Azure in the subject’s common name, indicating Azure-hosted services.
+
+
+▪ Search for any cloud asset 
+tag:cloud 
+Obtains information on any assets tagged as being part of a cloud infrastructure. Note: The "tag" filter is only available to enterprise users.
+
+
+▪ Search within a specific IP range 
+net:52.0.0.0/8 
+Searches within a specific IP range, such as those assigned to AWS, where 52.0.0.0/8 is a common range for AWS.
+
+
+▪ Search within the instances
+http.html:"s3.amazonaws.com"
+Searches for instances where the HTML content mentions "s3.amazonaws.com", which could indicate the AWS S3 buckets used.
+
+▪ Search for AWS-hosted services and infrastructure used by Facebook 
+Amazon web services Facebook
+Searches for various AWS-hosted services and infrastructure used by Facebook such as IP addresses, open ports, and service banners. 
+This includes details on publicly accessible S3 buckets, EC2 instances, and other AWS resources associated with Facebook.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
