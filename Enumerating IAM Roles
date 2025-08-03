@@ -1,0 +1,24 @@
+Attackers enumerate IAM role names by analyzing the AWS error messages, which reveal information regarding the existence of a user. 
+
+Generally, in AWS cloud services, users are allowed to perform numerous attempts to assume a role.
+
+For every failed attempt, AWS response messages reveal information about the existence of the role. 
+
+If the AWS blocks an account after some failed attempts, implementing a brute-force technique can be difficult but not impossible.
+
+By executing the process with a fragmented set of accounts or nodes, attackers can ultimately evade IP and account filtering solutions.
+
+An attacker can also use tools such as Principal Mapper to enumerate IAM roles, as follows: 
+
+▪ Principal Mapper 
+Attackers can use a Principal Mapper (PMapper) to identify vulnerabilities associated with AWS Identity and Access Management (IAM) configurations in an AWS account or organization. 
+
+This tool visualizes IAM users and their roles through a directional graph that provides privilege escalation opportunities and potential attack paths to resources in AWS
+
+
+
+
+
+
+
+
