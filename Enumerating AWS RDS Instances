@@ -1,0 +1,47 @@
+To enumerate AWS Relational Databases (RDS) instances, attackers use the following AWS CLI commands, which provide detailed information about the RDS instances, such as their configuration, security groups, and snapshots
+
+▪ Run the following command to view all provisioned RDS Instances: 
+aws rds describe-db-instances
+
+▪ Run the following command to list specific RDS Instance: 
+aws rds describe-db-instances mydbinstancecf
+
+▪ Run the following command to get information about DB security groups: 
+aws rds describe-db-security-groups
+
+▪ Run the following command to get details about automated backups for RDS instances:
+aws rds describe-db-instance-automated-backups
+
+▪ Run the following command to obtain details about the DB snapshots (including manual and automated snapshots): 
+aws rds describe-db-snapshots
+
+▪ Run the following command to view public DB snapshots that can be shared across accounts:
+aws rds describe-db-snapshots --include-public --snapshot-type public
+
+▪ Run the following command to view already existing public snapshots in an account: 
+aws rds describe-db-snapshots --snapshot-type public
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
