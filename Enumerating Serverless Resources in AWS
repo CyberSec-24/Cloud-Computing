@@ -1,0 +1,34 @@
+Serverless architectures can be automatically scaled to handle large volumes of data collection and processing, enabling attackers to efficiently gather extensive information from distributed sources. 
+
+To effectively enumerate serverless resources in the AWS, specifically focusing on AWS Lambda and DynamoDB, an attacker can use the following AWS CLI commands
+
+▪ Run the following command to list all the Lambda functions: aws lambda list-functions
+
+▪ Run the following command to get information about a Lambda function and its version: aws lambda get-function --function-name <function_name>
+
+▪ Run the following command to examine the configuration details of the Lambda function, including the environment variables: aws lambda <function_name>
+
+▪ Run the following command to list the exposed URLs of a Lambda function, which allows direct HTTP interactions with the functions: aws lambda list-function-url-configs --function-name <function_name>
+
+▪ Run the following command to view the configurations specific to a Lambda function URL: aws lambda get-function-url-config --function-name <function_name>
+
+▪ Run the following command to identify the event sources that trigger the Lambda function: aws lambda <function_name>
+
+▪ Run the following command to find all the managed policies attached to a target IAM role: aws iam list-attached-role-policies --role-name <role_name>
+
+▪ Run the following command to list the DynamoDB table names associated with the current account and endpoint: aws dynamodb list-tables
+
+▪ Run the following command to obtain details of a DynamoDB table, including the status and metadata: aws dynamodb describe-table --table-name <table_name>
+
+▪ Run the following commands to list all DynamoDB global tables: aws dynamodb list-global-tables
+
+▪ Run the following command to retrieve API Gateway REST APIs: aws apigateway get-rest-apis
+
+▪ Run the following command to get information about a specific REST API Gateway: aws apigateway get-rest-api --rest-api-id <api_id>
+
+
+
+
+
+
+
