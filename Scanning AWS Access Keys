@@ -1,0 +1,37 @@
+DumpsterDiver allows attackers to examine a large volume of file types while scanning hardcoded secret keys, such as AWS access, SSL, and Microsoft Azure keys. 
+
+It also allows attackers to generate simple conditional-based search rules.
+
+Attackers use this tool to identify potential secret leaks and hardcoded passwords in the target cloud services.
+
+Run the following command to retrieve the AWS access keys:
+DumpsterDiver.py [-h] -p LOCAL_PATH [-r] [-a] [-s] [-l [0,3]] [-o OUTFILE] [--min-key MIN_KEY] [--max-key MAX_KEY] [--entropy ENTROPY] [--min-pass MIN_PASS] [--max-pass MAX_PASS]
+[--pass-complex {1,2,3,4,5,6,7,8,9}] [--grep-words GREP_WORDS [GREP_WORDS ...]] [--exclude-files EXCLUDE_FILES [EXCLUDE_FILES ...]] [--bad-expressions BAD_EXPRESSIONS [BAD_EXPRESSIONS ...]]
+
+In the above command, ▪ -p LOCAL _PATH → Path to the folder containing files to be analyzed
+. ▪ -r, --remove → Set this flag to remove files that do not contain secret keys. 
+▪ -a, --advance → Set this flag to analyze files using rules specified in 'rules.yaml'.
+▪ -s, --secret → Set this flag to analyze files in search of hardcoded passwords. 
+▪ -o OUTFILE → Generate output in JSON format.
+
+Example Commands 
+▪ DumpsterDiver scans the directories or archives of potential secrets. 
+To scan the directory, use: dumpsterDiver -p /path/to/scan The tool specifically looks for patterns that match the AWS access keys.
+
+These patterns include a specific format and length that are typical of AWS keys. 
+For example, it searches for strings, such as AKIA, followed by 16 alphanumeric characters, which is the standard format for AWS access keys.
+
+▪ Scanning a directory for AWS keys:
+dumpsterDiver -p /path/to/scan -e AWS_KEY Once the scan is complete, DumpsterDiver provides a report of the potential secrets found.
+This report includes the file paths and suspected secrets
+
+
+
+
+
+
+
+
+
+
+
