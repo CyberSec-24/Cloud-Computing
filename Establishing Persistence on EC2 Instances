@@ -1,0 +1,67 @@
+Establishing persistence in EC2 instances involves ensuring continuous access to a compromised system, even after it reboots or attempts to remove the attacker’s foothold.
+
+This technique is crucial for attackers to maintain their presence and continue malicious activities
+
+Techniques for Establishing Persistence on EC2 Instances: 
+
+▪ Creating Backdoor Users:
+Attackers can create new IAM users or roles with administrative privileges, ensuring that they can regain access even if the original entry point is closed.
+
+Steps to Create Backdoor Users in EC2 instance:
+o Step 1: Gain initial access to the EC2 instance with sufficient privileges.
+
+o Step 2: Run the AWS CLI or management console to create a new IAM user or role with administrative permission using the following commands: 
+aws iam create-user --user-name <Username>
+aws iam attach-user-policy --user-name <Username> --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+
+o Step 3: Store the access keys securely to use for future logins
+
+
+▪ Altering Startup Scripts: 
+By modifying instance startup scripts (e.g., rc.local, init.d, systemd), attackers can ensure that their malicious code runs every time an instance is restarted, maintaining its presence in the system
+
+Steps to alter the Startup scripts: 
+o Step 1: Gain root or sudo access to the EC2 instance.
+
+o Step 2: Modify startup script files such as /etc/rc.local, /etc/init.d/ or systemd service files to include commands that execute malicious code.
+echo "/path/to/malicious/script.sh" >> /etc/rc.local
+
+o Step 3: Ensure the script has executable permissions. chmod +x /path/to/malicious/script.sh
+
+
+▪ SSH Key Injection: 
+Adding their own SSH keys to the ~/.ssh/authorized_keys file allows attackers to log in using SSH without requiring passwords, thereby providing stealthy and persistent access.
+
+Steps to inject attackers SSH key: 
+o Step 1: Access the target EC2 instance with sufficient privileges.
+
+o Step 2: Add the attacker’s SSH public key to the ~/.ssh/authorized_keys file for the target user. echo "ssh-rsa ~/.ssh/authorized_keys
+
+
+▪ Installing Rootkits: 
+Deploying rootkits enables attackers to hide their malicious processes and files from standard system-monitoring tools,
+ensuring that they can maintain privileged access without detection.
+
+
+▪ Leveraging IAM Roles: Attackers may abuse existing IAM roles or policies to create new roles with elevated permissions or to modify existing roles, 
+persistently allowing them to access other resources within the AWS environment
+
+Steps to create new malicious roles in AWS environment: 
+o Step 1: Enumerate existing IAM roles with elevated privileges. 
+
+o Step 2: Use access to assume an existing role and create a new one with similar privileges. 
+aws iam create-role --role-name <Role-name> --assume-role-policy-document file:// Test-Role-Trust-Policy.json
+aws iam attach-role-policy --role-name <Role-name> --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+
+o Step 3: Use the new role to access other resources in the AWS environment.
+
+
+These techniques highlight the various methods that attackers may use to maintain their presence in EC2 instances,
+and complicate efforts to fully remove their access and secure the AWS environment
+
+
+
+
+
+
+
