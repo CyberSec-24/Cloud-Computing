@@ -1,0 +1,36 @@
+Stratus Red Team is "Atomic Red TeamTM" for the cloud, allowing emulation of offensive attack techniques in a granular and self-contained manner.
+
+Attackers use the Stratus Red Team to simulate various attack techniques in target cloud environments. 
+
+This tool supports multiple platforms, including AWS, GCP, Azure, and Kubernetes. 
+
+Inspired by the Atomic Red Team, it maps its techniques to the MITRE ATT&CK framework, allowing security teams and attackers to conduct comprehensive and realistic security checks to identify vulnerabilities. 
+
+This tool is self-contained and easy to use for various attack simulations
+
+▪ To use Stratus attack techniques against AWS, the attacker must be authenticated before running the attack.
+
+For this purpose, we use the aws-vault command or static credentials in ~/.aws/config and set up the desired AWS _ profile using export AWS_PROFILE=my-profile.
+
+▪ Run the following command to be authenticated to AWS: aws-vault exec sandbox-account
+▪ Run the following command to list available attack techniques for the MITRE ATT&CK 'persistence' tactic against AWS:
+stratus list --platform AWS --mitre-attack-tactic persistence
+
+▪ Run the following command to view the details of a specific technique: stratus show <Attack technique>
+
+▪ Run the following command to warm up an attack technique by spinning up the prerequisite infrastructure or configuration without detonating it: stratus warmup <Attack technique>
+
+▪ Run the following command to detonate an attack technique: stratus detonate <Attack technique>
+
+▪ Run the following command to clean up any leftover infrastructure from an attack technique stratus cleanup <Attack technique> or $ stratus cleanup --all
+
+
+
+
+
+
+
+
+
+
+
