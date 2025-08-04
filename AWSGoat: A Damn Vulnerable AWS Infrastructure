@@ -1,0 +1,31 @@
+AWSGoat is a vulnerable AWS infrastructure designed to help attackers hone their cloud exploitation skills.
+
+It offers a realistic hands-on environment with various vulnerabilities that simulate real-world attack scenarios.
+
+By interacting with AWSGoat, attackers can gain practical experience in identifying and exploiting weaknesses within AWS environments, enhancing their understanding of common vulnerabilities, and effectively improving their ability to breach and manipulate the AWS infrastructure.
+
+The following are different scenarios in which attackers can leverage AWSGoat to sharpen and enhance their attack skills
+
+▪ SQL Injection 
+Exploit  vulnerability in the web application hosted within the AWSGoat environment to perform an SQL injection attack
+
+
+▪ ECS Breakout and Instance Metadata
+Exploit vulnerabilities within a container to escape its confines and access the underlying host. 
+Then, the instance metadata service is targeted to retrieve the IAM credentials associated with the AWS instances.
+
+
+▪ Server-Side Request Forgery
+Perform an SSRF attack to retrieve the /etc/passwd file from the Lambda execution environment and then compromise the environment to create a new user with administrator privileges
+
+
+▪ IAM Privilege Escalation
+Escalate privileges to gain administrator-level access on the AWS account.
+
+
+
+
+
+
+
+
