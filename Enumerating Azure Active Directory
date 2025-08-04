@@ -1,0 +1,69 @@
+Cloud platforms, such as Office 365, can be accessed directly from the Internet. 
+
+Hence, attackers target these environments to gather as much information as possible to initiate different attacks on Azure Active Directory (AD) and Office 365. 
+
+The techniques used to enumerate the Azure AD accounts
+
+Account Enumeration
+Azure AD (AAD) users with access to Office 365 services can enumerate all user accounts and admin groups. 
+
+This possibility of accessing the Office 365 service may motivate attackers to exploit and take advantage of the Azure AD to perform account enumeration.
+
+Attackers can perform Azure AD enumeration by using tools such as AzureGraph
+▪ AzureGraph 
+
+AzureGraph is an Azure AD information-gathering tool that uses Microsoft Graphs. 
+
+This tool helps attackers obtain all types of information from the Azure AD, such as users, devices, applications, and domains. 
+
+It allows the attacker to query these data through the API in an easy and simple manner through a PowerShell console. 
+
+Additionally, the attacker can download all the information from the target cloud and use it completely offline
+
+
+Enumerating Azure AD Accounts o Run the following command for authentication with AAD and create a new login session:
+gr <-create_graph_login()
+
+o Run the following command to view all users present in the Azure AD tenant:
+gr$list_users()
+
+o Run the following command to retrieve information about the authenticated user (the user is currently logged in):
+me <-gr$get_user("username")
+
+o Run the following command to view the group that the authenticated user belongs to:
+head(me$list_group_memberships()
+
+o Run the following command to retrieve applications owned by the authenticated user/account:
+me$list_owned_objects(type="application_name")
+
+
+**Password Spraying**
+Attackers use password spraying to perform automated password guessing for Azure AD accounts. 
+
+This method does not account for lockouts because logon attempts are performed against all user accounts simultaneously using a single password. 
+
+If both on-premises and cloud accounts use the same password without an MFA, then there is a high probability that attackers will gain access to the target network through password spraying. 
+
+Attackers can perform password spraying using sophisticated tools such as Spray365
+
+The Spray365 tool allows attackers to identify valid credentials for Microsoft accounts (Office 365 / Azure AD). 
+
+The tool also helps attackers in generating an execution plan, spraying the execution plan, and finally, allowing them to review the results of their spraying operation. 
+
+Steps to use Spray365 tool: 
+o Run the following command to generate an execution plan
+python spray365.py generate normal  -ep <execution_plan_filename> -d  <domain_name> -u <file_containing_usernames> -pf <file_containing_passwords>
+
+o Run the following command to spray credentials with an execution plan: 
+python3 spray365.py spray -ep <execution_plan_filename>
+
+
+
+
+
+
+
+
+
+
+
