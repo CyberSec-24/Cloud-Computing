@@ -35,7 +35,9 @@ Consequently, attackers install backdoors to the AWS infrastructure using the fo
 ▪ Manipulating user data associated with the EC2 instance with privileged access rights 
 ▪ Creating new EC2 instances depending on the AMI by assigning a privileged role
 
+▪ Inserting a backdoor to the existing Lambda function (e.g., the function creates a new user once invoked)
 
+▪ Manipulating access keys using Lambda functions, such as rabbit_lambda, cli_lambda, and backdoor_created_users_lambda
 
 
 
