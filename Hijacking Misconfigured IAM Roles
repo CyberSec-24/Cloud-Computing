@@ -1,0 +1,35 @@
+AWS IAM policies, such as AssumeRole permissions, are flexible; however, misconfigurations in role permissions can open doors to various attacks. 
+
+For instance, if the role “AWS”:”*” (poorly configured) exists, any user with a valid AWS account can assume the role and obtain the corresponding credentials
+
+Attackers use tools such as Pacu, which is an open-source AWS exploitation framework, to enumerate and hijack IAM roles. 
+
+The tool contains a 1100+ wordlist of commonly used role names. The script automatically alerts the attacker when a role is identified. 
+
+It can also identify misconfigured roles, auto-assume the identified roles, and subsequently expose role credentials
+
+Attackers can run the Pacu script below to assume their roles. Before running the script, attackers must obtain the target account ID to assume the role. 
+
+assume_role_enum.py [-h] [-p PROFILE] [-w WORD_LIST] -I ACCOUNT_ID 
+
+the tool initiated role enumeration on a target account and discovered restricted roles, such as “5” and “ADS,” and the misconfigured role “APIGateway”. 
+
+The script then assumes a role and exposes the role credentials in JSON format. Attackers can use role credentials to conduct other targeted attacks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
