@@ -1,0 +1,35 @@
+Attackers use various techniques and tools to identify attack surfaces in a target Azure environment.
+
+By identifying attack surfaces, attackers can design suitable exploits to launch multiple attacks on a target environment.
+
+Attackers can use tools such as Stormspotter to identify potential attack surfaces. 
+
+Stormspotter is a tool that maps Azure and Azure Active Directory objects, helping attackers create a visual graph of the resources in an Azure subscription. 
+
+This tool allows attackers to observe attack surfaces and find ways to move within the tenant
+
+The Stormcollector module within Stormspotter lists all the subscriptions that the provided credentials can access.
+To check all the options Stormcollector offers, you can use the -h switch.
+
+Some alternative commands to use Stormcollector are as follows:
+
+▪ Run the following command to run Stormcollector in CLI mode.
+python3 sscollector.pyz cli
+
+ Run the following command to run Stormcollector using a service principal name (SPN) for authentication:
+python3 sscollector.pyz spn -t <tenant> -c <clientID> -s <clientSecret>
+
+Here: 
+-t <tenant>: Specifies the Azure tenant ID. 
+-c <clientID>: Specifies the client ID of the service principal. 
+-s <clientSecret>: Specifies the client secret associated with the service principal.
+
+After authentication, an attacker can enumerate the resources, configurations, and potential security gaps within the Azure subscription that can be further exploited.
+
+The CLI mode leverages the current Azure CLI authentication, whereas the service principal mode requires specific credentials, allowing for a more flexible and targeted enumeration
+
+
+
+
+
+
