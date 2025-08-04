@@ -1,0 +1,48 @@
+After gaining administrator-level access to cloud resources, attackers manipulate the cloud trails to remain undetected and gain persistent access to the compromised environment.
+
+In the AWS cloud environment, user activities are monitored through the CloudTrail service. 
+
+The first step an attacker performs after gaining high-level access to the compromised environment is hiding the traces.
+
+By default, the CloudTrail service is disabled. An administrator needs to explicitly configure to enable the CloudTrail service and configure trails to monitor user activities. 
+
+Attackers disable the logging functionality by pausing the CloudTrail service and resume the service after executing the attack
+
+Run the following command to stop logging via CloudTrails:
+$ aws CloudTrail stop-logging --name targetcloud_trail --profile administrator 
+
+Run the following command to acquire the trial status:
+$ aws CloudTrail get-trial-status --name targetcloud_trail --profile administrator
+
+After disabling the CloudTrail service, attackers may perform various malicious activities, such as creating backdoor IAM users, exfiltrating data, and running crypto-miner script
+
+Once execution of the attack is completed, attackers will again enable the logging of trails running the following command:
+$ aws CloudTrail start-logging --name targetcloud_trail --profile administrator
+
+In some scenarios, attackers may permanently remove the trails by running the following command:
+$ aws CloudTrail delete-trail --name targetcloud_trail --profile administrator
+
+Alternatively, attackers may delete the contents of the bucket that stores the trails by running the following command:
+$ aws s3 rb s3://<Bucket_Name or Bucket_Reference> --force --profile administrator
+
+Other techniques used by attackers to cover the tracks include the following: 
+▪ Encrypting the cloud trails using a new key ▪ Moving the trails to a new S3 bucket 
+▪ Using the AWS Lambda function to delete new trail entries
+
+After clearing the logs, attackers perform further exploitation to maintain persistent access to the cloud infrastructure. 
+
+Consequently, attackers install backdoors to the AWS infrastructure using the following techniques: 
+▪ Manipulating user data associated with the EC2 instance with privileged access rights 
+▪ Creating new EC2 instances depending on the AMI by assigning a privileged role
+
+
+
+
+
+
+
+
+
+
+
+
