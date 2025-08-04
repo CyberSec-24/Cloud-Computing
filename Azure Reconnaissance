@@ -1,0 +1,26 @@
+AADInternals is a PowerShell module used for administering Azure AD and Office 365. 
+
+It provides a wide range of tools for reconnaissance, exploitation, and post-exploitation tasks in an Azure AD context.
+
+Steps to Perform Azure Reconnaissance using AADInternals 
+
+▪ After installing and importing the ADDInternals module into the PowerShell session, run the following command to start tenant recon of the given domain: 
+Invoke-AADIntReconAsOutsider -Domain <domain name> | Format-Table
+
+This command fetches all verified domains of the tenant and extracts information such as their type
+
+▪ Run the following command to return login information for the given user (or domain): 
+Get-AADIntLoginInformation -Domain <domain name>
+
+▪ Run the following command to return all registered domains from the tenant of the given domain:
+Get-AADIntTenantDomains -Domain <domain name>
+
+
+
+
+
+
+
+
+
+
