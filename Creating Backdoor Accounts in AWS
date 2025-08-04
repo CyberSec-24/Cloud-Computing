@@ -1,0 +1,31 @@
+Attackers can create backdoor accounts in an AWS cloud platform by creating a rogue AWS account. 
+
+Attackers abuse the existing resources in the cloud platform by modifying the existing policies or exploiting the resources via APIs and AWS Resource Access Manager (RAM). 
+
+Attackers use tools such as Endgame and Pacu to create backdoor accounts in an AWS cloud platform
+
+▪ Endgame 
+The Endgame tool is an exploitation framework that helps attackers gain control over an existing AWS cloud platform through a rogue account and create a backdoor account in it. 
+
+An attacker can create a list of backdoor accounts in the targeted AWS cloud platform by utilizing the tool’s full-length capabilities
+
+It is a post-exploitation tool that requires access to the AWS API credentials for a target user account that has the privileges to modify the resource policies
+
+▪ Run the following command to list the IAM resources with the user account: endgame list-resources -s iam
+
+▪ Run the following command to list S3 buckets: endgame list-resources --service s3
+
+▪ Run the following command to list resources across the services: endgame list-resources --service all
+
+▪ Run the following command to create a backdoor to a specific resource: endgame expose --service iam --name test-resource-exposure
+
+
+
+
+
+
+
+
+
+
+
