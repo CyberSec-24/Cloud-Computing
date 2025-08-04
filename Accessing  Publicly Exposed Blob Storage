@@ -1,0 +1,38 @@
+Goblob is a lightweight and fast enumeration tool designed to aid in the discovery of sensitive information exposed publicly in Azure blobs.
+
+This tool helps attackers discover vulnerabilities by performing vulnerability scanning and reconnaissance.
+
+
+Steps to Access Publicly Exposed Blob Storage using Goblob: ▪ Run the following command to enumerate the public Azure blob storage URLs for a single storage account: 
+./goblob <storageaccountname> 
+The above command targets a specific Azure storage account (specified by <storageaccountname>) to enumerate and discover publicly accessible blob storage URLs.
+
+▪ Run the following command to enumerate the public Azure blob storage URLs for multiple storage accounts:
+./goblob -accounts accounts.txt
+This command uses a file (accounts.txt) containing a list of Azure storage account names. 
+
+Goblob will check each storage account listed in the file for publicly accessible blob storage URLs
+
+
+▪ Run the following command to enumerate a custom list of blob storage container names:
+./goblob -accounts accounts.txt -containers wordlists/goblob-folder-names.txt
+This command specifies a list of storage account names (accounts.txt) and custom list of container names (wordlists/goblob-folder-names.txt). 
+Goblob will use the custom container names to construct potential blob storage URLs for each storage account.
+
+▪ Run the following commands to print the output results into a file (here, results.txt):
+./goblob -accounts accounts.txt -containers wordlists/goblob-folder-names.txt -output results.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
