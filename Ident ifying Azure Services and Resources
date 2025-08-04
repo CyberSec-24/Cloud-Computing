@@ -1,0 +1,46 @@
+Identifying Azure services and resources is crucial for attackers to map the cloud environment and discover potential targets.
+
+By understanding the available services and resources, attackers can identify misconfigurations, vulnerabilities, and weaknesses to exploit.
+
+This reconnaissance phase is essential for planning further attacks such as privilege escalation, lateral movement, or data exfiltration. 
+
+Attackers can perform this by leveraging Azure's APIs or exploiting the exposed endpoints.
+
+They can also use tools such as Azure CLI and MicroBurst to automate the process of enumerating resources and services within an Azure subscription
+
+They may use tools such as AZ CLI and MicroBurst to automate the process of enumerating resources and services within an Azure subscription
+
+The following are steps to enumerate Azure services and resources using MicroBurst:
+o Run the following commands to import the MicroBurst module into an authenticated AZ module PowerShell session: 
+Import-Module .\MicrosBurst.psm1
+
+o Run the following command to create a folder and store the function’s output that is to be executed:
+New-Item -Name "microburst_output" -ItemType "directory"
+
+o Run the following command to execute the MicroBurst function and perform Azure services and resource enumeration:
+Get-AzDomainInfo -Verbose -Folder microburst-output 
+This command obtains the enumerated results in CSV format and text files, which are stored in a specific output folder.
+
+o Now, run the following command to open the output folder using file explorer:
+explorer microburst-output
+This command creates an output folder called Az, which you can open and access the resources for further details
+
+
+To execute the commands above for enumerating Azure resources using MicroBurst, the user does not require local administrative privileges. 
+However, appropriate Azure AD and ARM permissions are necessary to perform enumeration. 
+The user should have at least the Reader role to gather information about the Azure resources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
