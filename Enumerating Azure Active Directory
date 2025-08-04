@@ -57,7 +57,8 @@ python spray365.py generate normal  -ep <execution_plan_filename> -d  <domain_na
 o Run the following command to spray credentials with an execution plan: 
 python3 spray365.py spray -ep <execution_plan_filename>
 
-
+o Run the following command to review the results of a spraying operation: 
+python3 spray365.py review <spray_results_json_filename>
 
 
 
