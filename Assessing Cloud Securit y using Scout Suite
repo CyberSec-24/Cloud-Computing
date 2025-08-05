@@ -1,0 +1,28 @@
+Attack surface discovery involves identifying all potential points of entry that an attacker can exploit to gain unauthorized access to a cloud network or virtual environment. 
+
+This process includes asset identification, vulnerability assessment, access control review, network mapping, penetration testing, compliance checks, and threat analysis. 
+
+Security professionals can use tools such as Scout Suite to identify potential attack surfaces in their cloud environments. 
+
+▪ Scout Suite 
+Scout Suite is a multi-cloud security-auditing tool that helps security professionals assess the security posture of cloud environments. 
+
+It leverages APIs exposed by cloud providers to gather configuration data for manual inspection and automatically highlights areas of risk.
+
+Instead of navigating through numerous pages on web consoles, Scout Suite offers a clear and concise view of the attack surface
+
+
+Some Example Commands to Perform Attack Surface Discovery using Scout Suite 
+▪ Run the following Scout Suite command against AWS to assess its security posture: 
+scout aws --profile <your-aws-profile> This command scans and analyzes AWS cloud resources for security loopholes.
+
+▪ Run the following Scout Suite command against Azure to assess its security posture:
+scout azure --tenant-id <your-tenant-id> --subscription-id <your-subscription-id> --client-id <your-client-id> --client-secret <your-client-secret>
+
+▪ Run the following Scout Suite command against GCP to assess its security posture:
+scout gcp --service-account-file path/to/your-service-account-key.json
+
+▪ Once scanning is completed, Scout Suite generates an HTML report, including the findings and cloud account configuration.
+
+
+
