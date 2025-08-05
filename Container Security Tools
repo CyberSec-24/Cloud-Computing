@@ -1,0 +1,19 @@
+As containers are continuously deployed across cloud environments, they need to be protected with higher security standards. 
+
+Security professionals use tools, such as Aqua, Sysdig Falco and Anchore, to protect containers against various security breaches. 
+
+▪ Aqua 
+Aqua scans container images, VMs, and serverless functions for known vulnerabilities, embedded secrets, configuration and permission issues, malware, and open-source licensing.
+
+This tool restricts untrusted code from running and ensures that functions, containers, and VMs remain immutable, thus preventing any changes to running workloads compared with their originating images.
+
+Aqua can also integrate into existing infrastructure, thereby making it easy to manage DevSecOps collaboration, logging and reporting, incident response, and event monitoring
+
+
+
+
+
+
+
+
+
