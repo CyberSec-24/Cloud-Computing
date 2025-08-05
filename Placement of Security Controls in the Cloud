@@ -1,0 +1,32 @@
+It is a best practice to choose information security controls and implement them in proportion to the risks, generally by assessing threats, vulnerabilities, and impacts. 
+
+One must ensure that proper defensive implementation is in place for the cloud security architecture to be efficient. 
+
+Many security controls exist that, when kept in a proper place, can safeguard any vulnerability in the system and reduce the effects of an attack
+
+
+Categories of security controls: 
+▪ Deterrent controls – These controls reduce attacks on the cloud system. 
+Example: A warning sign on the fence or property to inform potential attackers of adverse consequences if they proceed to attack.
+
+▪ Preventive controls – These controls strengthen the system against incidents by minimizing or eliminating vulnerabilities.
+Example: A strong authentication mechanism to prevent unauthorized use of cloud systems.
+
+▪ Detective controls – These controls detect and react appropriately to occurring incidents.
+Example: Employing IDSs, IPSs, etc. helps detect attacks on cloud systems.
+
+▪ Corrective controls – These controls minimize the consequences of an incident by limiting the damage.
+Example: Restoring system backups
+
+
+
+
+
+
+
+
+
+
+
+
+
