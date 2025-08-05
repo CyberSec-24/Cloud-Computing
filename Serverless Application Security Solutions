@@ -1,0 +1,16 @@
+Serverless cloud computing has witnessed enormous growth in the last couple of years. 
+
+However, the evolving cloud-based infrastructure also invites various security risks, such as function event-data injection, broken authentication, and over-privileged function permissions.
+
+Therefore, it is mandatory to carry out security inspections at regular intervals. 
+
+Security professionals use various tools, such as Dashbird, CloudGuard and Prisma Cloud to conduct security tests on serverless infrastructure
+
+
+▪ Dashbird
+
+Dashbird is a comprehensive observability and monitoring platform designed for serverless applications. 
+
+It provides real-time monitoring, error detection, and end-to-end visibility across various cloud resources, thus enabling security professionals to identify and resolve issues.
+
+By integrating seamlessly with cloud environments, it helps maintain high performance, security, and operational excellence for serverless workloads
