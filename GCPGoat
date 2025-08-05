@@ -1,0 +1,20 @@
+▪ Server-Side Request Forgery (SSRF)
+Perform an SSRF attack, fetch the source code file from the cloud function and dump the database to overtake the admin account of the target blog application
+
+
+▪ Misconfigured Storage Bucket Policies 
+Use the misconfigured bucket policies to gain admin access to one of the buckets
+
+
+▪ Lateral Movement
+Find the credential for a low privileged virtual machine instance from the dev bucket and then access other high privileged Compute Instances through that low privileged machine.
+
+
+
+
+
+
+
+
+
+
