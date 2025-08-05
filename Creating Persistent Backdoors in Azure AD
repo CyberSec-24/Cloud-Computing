@@ -1,0 +1,50 @@
+The primary purpose of creating backdoors with Azure AD roles is to maintain persistent access to an organization's cloud resources without leaving any traces. 
+
+By exploiting Azure AD roles, attackers can maintain long-term access, gain elevated permissions to perform malicious activities, and remain undetected by traditional security mechanisms. 
+
+To achieve this, attackers can leverage Azure AD roles to create backdoors by assigning themselves or a controlled user /service principal to privileged roles. 
+
+Tools such as Azure CLI, PowerShell, and BloodHound can be used to achieve this objective
+
+Attackers can perform the following steps to create a backdoor and establish persistence using the Azure CLI commands after identifying and obtaining access to a target user account:
+
+▪ Step 1: Run the following command to identify the target role in the Azure environment: 
+az role definition list --output table 
+This command lists all available roles in the Azure environment, helping identify the target role for backdoor creation.
+
+▪ Step 2: Run the following command to create a new service principal:
+az ad sp create-for-rbac --name <service-principal-name> 
+This command creates a new service principal and returns the details, including the client ID and secret.
+
+▪ Step 3: Run the following command to assign a privileged role to the service principal:
+az role assignment create --assignee <service-principal-id> --role <role-name>
+
+For example, if you want to assign the “Owner” role, you can run the above command as:
+az role assignment create --assignee <service-principal-id> --role "Owner"
+
+▪ Step 4: Once the role is assigned, run the following command to verify the role assignment: 
+az role assignment list --assignee <service-principal-id> --output table
+
+Step 5: Now, use legitimate naming conventions such as “ProductionServicePrincipal” to make the service principal look less suspicious, which helps in maintaining persistence.
+
+Assign multiple roles to different service principals and periodically rotate the service principal credentials to avoid detection.
+az ad sp credential reset --name <service-principal-id>
+
+Hence, creating backdoors with Azure AD roles is a sophisticated method that can be used by attackers to ensure long-term and stealthy access to target cloud environments.
+
+By leveraging legitimate roles and permissions, they can avoid detection and maintain control over compromised environments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
