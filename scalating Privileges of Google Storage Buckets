@@ -1,0 +1,32 @@
+Similar to Amazon AWS S3 buckets, Google Storage uses buckets for static file storage. 
+
+Vulnerabilities in bucket permission policies may expose the buckets to all GCP users or even to the public Internet. 
+
+Like AWS S3 buckets, Google Storage buckets are also vulnerable to privilege escalation attacks through misconfigured bucket ACLs. 
+
+GCPBucketBrute is a script-based tool that allows attackers to enumerate Google storage buckets, determine what kind of access they have on to them, and check whether they can be privilege-escalated. Using this tool, attackers can check the bucket’s policy by making a direct
+
+HTTP request to “https://www.googleapis.com/storage/v1/b/BUCKETNAME/iam”. If “allUsers” or “allAuthenticatedUsers” can read the bucket policy, attackers get a valid response; otherwise, an access denied message is displayed.
+
+Attackers can use the Google storage “TestIamPermissions” API by giving a bucket name and a list of Google storage permissions to retrieve the bucket permissions.
+
+Attackers use the GCPBucketBrute tool to check what privileges are granted to them on the discovered buckets.
+
+If attackers have some access to the buckets, GCPBucketBrute displays a list of the possessed permissions. 
+
+If attackers have enough access to escalate privileges to the bucket, the tool displays a message showing the bucket is vulnerable to privilege escalation. 
+
+This way, attackers can elevate their permissions to the administrator level.
+
+
+
+
+
+
+
+
+
+
+
+
+
