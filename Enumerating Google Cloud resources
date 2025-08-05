@@ -1,0 +1,38 @@
+The enumeration of Google Cloud resources, such as Compute Engine and Cloud SQL instances, reveals critical infrastructure details. 
+
+Attackers can identify virtual machines, operating systems, open ports, network configurations, or publicly accessible services in Compute Engine instances by exploiting weak security settings or outdated software.
+
+Cloud SQL instances can identify database versions and access settings targeting weak passwords, excessive permissions, or unpatched vulnerabilities. 
+
+Attackers can use the commands listed below to enumerate instances
+
+▪ Run the following command to identify all Compute Engine instances in a project:
+gcloud compute instances list
+
+▪ Run the following command to retrieve all the data associated with a Compute Engine virtual machine instance in a specific zone:
+gcloud compute instances describe <instance> --Zone <zone>
+
+▪ Run the following command to list the service accounts associated with a Compute Engine instance:
+gcloud compute instances describe INSTANCE_NAME --zone=<zone> --format="table(serviceAccounts.scopes)"
+
+▪ Run the following command to view the SQL instances associated with the current project:
+gcloud sql instances list
+
+▪ Run the following command to enumerate SQL databases associated with the current project:
+gcloud sql databases list --instance=<instance_name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
