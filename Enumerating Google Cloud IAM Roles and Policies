@@ -1,0 +1,29 @@
+By analyzing roles and policies, attackers can find accounts with excessive privileges and misconfigured access controls and understand permission hierarchies. 
+
+This helps them exploit overprivileged accounts and access sensitive data and resources.
+
+Attackers can use the following commands to enumerate the IAM roles and policies in a targeted Google Cloud environment:
+
+▪ Run the following command to list predefined roles or custom roles for an organization or project:
+gcloud iam roles list [--show-deleted] [--organization=<organization>] [--project=<project_id>]
+In the above command, the --show-deleted flag includes the deleted roles in the results.
+
+
+▪ Run the following command to retrieve the metadata, including permissions, of a specified IAM role:
+gcloud iam roles describe <role_id> [--organization=<organization>] [--project=<project_id>] 
+
+
+▪ Run the following commands to get the IAM policies:
+gcloud organizations get-iam-policy <organization_id> for an organization.
+gcloud projects get-iam-policy <project id> for a project.
+gcloud resource-manager folders get-iam-policy <folder_id> for a folder.
+
+
+
+
+
+
+
+
+
+
