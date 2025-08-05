@@ -1,0 +1,33 @@
+Kubernetes is a distributed computing platform; therefore, it requires a distributed database, such as etcd. 
+
+Etcd is a distributed and consistent key-value storage, where Kubernetes cluster data, service discovery details, API objects, etc. are stored.
+
+The API server communicates with etcd to retrieve and store information based on the requests from other Kubernetes components. 
+
+Gaining access to etcd is the same as obtaining root-level access to the system. In Kubernetes, only the API server is allowed to access the etcd store.
+
+Attackers enumerate etcd processes, configuration files, open ports (identifying port number 2379), etc. to identify endpoints connected to the Kubernetes environment
+
+For example, attackers can use the following command to enumerate the location of the etcd server and PKI information:
+# ps -ef | grep apiserver
+
+Attackers also enumerate metadata services provided by the cloud service to identify the location of an etcd server and retrieve critical information, such as certificates and key files. 
+
+After gathering information about the etcd server and PKI, attackers can further browse the registries to retrieve cluster data.
+
+For example, attackers can run the following command to enumerate secrets stored in the Kubernetes cluster
+
+# ETCDCTL_API=3 ./etcdctl --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/apiserver-etcd-client.crt --key=/etc/kubernetes/pki/apiserver-etcd-client.key --endpoints=https://127.0.0.1:2379 get /registry/ --prefix | grep -a ’/registry/secrets/’
+
+Furthermore, attackers can use the following command to retrieve a key and convert it into YAML format:
+# ETCDCTL_API=3 ./etcdctl --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/apiserver-etcd-client.crt --key=/etc/kubernetes/pki/apiserver-etcd-client.key --endpoints=https://127.0.0.1:2379 get /registry/secrets/kube-system/weave-net-token-nmb26 |./auger decode -o yaml
+
+By decoding keys, attackers can identify endpoints from the kube config file. 
+Attackers can further use the information enumerated from etcd to perform privilege escalation attacks and gain access to node information
+
+
+
+
+
+
+
