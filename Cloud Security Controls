@@ -1,0 +1,77 @@
+Cloud security controls protect a cloud environment from any type of vulnerability and minimize the impacts of cyberattacks.
+
+These controls may include practices, procedures, guidelines, and policies that are enforced to secure the cloud infrastructure.
+
+
+▪ Cloud Application 
+Security Cloud application security is a set of rules, processes, policies, controls, and techniques that administer all the data exchange between collaborative cloud platforms such as Box, Google Workspace, Slack, and Microsoft Office 365. 
+
+If employees or users store and send data in cloud platforms over the long term, it is mandatory to include a cloud-based solution known as “safety net” in the zero-trust security implementation. 
+
+Cloud application security is applied to only the application layers of SaaS, IaaS, and PaaS
+
+
+▪ High Availability Across Zones
+A cloud environment for an application should have high availability zones because it should allow application’s services to be continued even during intentional or unintentional network downtimes. 
+
+High availability can be achieved by dividing servers into zones and maintaining network consistency across them. 
+
+It enables the environment to handle failures in individual availability zones or the network without losing data. 
+
+It also provides centralized management to monitor network operations and resource utilization
+
+A cloud environment with high availability consists of two nodes: 
+the master node and secondary node. The first server runs in the first availability zone, and the second server runs in secondary availability zone.
+
+This environment is protected from various service outages such as disk failure, volume failure, network failure and zone failure. 
+
+Here, each node is independent and has separate zones. 
+
+If any node fails, a copy of its data is ensured to exist in the other node, which provides access to all the information
+
+
+▪ Cloud Integration and Auditing
+Cloud integration is the process of grouping multiple cloud environments together in the form of a public or hybrid cloud that enables administrators to continuously access and handle systems, services, data, and applications. 
+
+It also combines a cloud environment with the on-premises environment.
+
+Without cloud integration, administrators need to perform each integration task independently and manually, which is a time consuming and error-prone process. 
+
+While risk indicators for on-premises networks are generally detected in network or application logs, cloud-based risk indicators are obtained from API logs. 
+
+Therefore, all the services should be integrated according to the defined security policies or guidelines and audited further to achieve security compliance
+
+Cloud integration mechanisms provide a comprehensive view over all of the organization’s data, enhance connectivity, and help in gathering all the indicators of risk for assessment.
+
+Cloud auditing is the process of analyzing the services offered by cloud providers and verifying the conformity to privacy, security, and performance requirements for the cloud environment.
+
+Cloud security audits must address the problems associated with both conventional and cloud infrastructure.
+
+Proper auditing can ensure the availability of services to the clients under all conditions in an organized and comprehensive manner.
+
+It also offers automated data collection on security and operations for systematic evaluation and comparison. 
+
+
+▪ Security Groups 
+A security group is a basic security measure implemented in cloud infrastructure to provide security to virtual instances. 
+
+It serves as a security solution for virtual machines. 
+
+The security group is located between the Internet and virtual instances, and it controls the inbound and outbound traffic. 
+
+A properly configured security group prevents denial-of-service (DoS) attacks and unauthorized access to IT resources
+
+
+▪ Instance Awareness
+The cloud-based kill chain model describes the possibilities of using fake cloud instances for command and control to exfiltrate data from a cloud environment. 
+
+Many security solutions such as firewalls, gateways, and other cloud security tools are incapable of fighting these threats because they cannot trace the differences between instances of cloud applications.
+
+Attackers often take advantage of this incapability when targeting cloud networks. 
+
+Hence, it is necessary to use tools that are aware of or can differentiate cloud instances such as Google Drive and OneDrive to protect against cloud-based threats such as data exfiltration and SaaS phishing
+
+
+
+
+
