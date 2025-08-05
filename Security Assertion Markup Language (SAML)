@@ -1,0 +1,43 @@
+SAML is a popular open-standard protocol used for authentication and authorization between two communicating entities. 
+
+It provides a single sign-on (SSO) facility for users to interact with multiple applications or services with one set of common credentials.
+
+SAML can be offered as software-as-a-service, which can be installed at the service provider (SP) and identity provider (IdP) to simplify the federated authorization and authentication mechanisms for users
+
+The SAML protocol consists of the following three entities
+
+▪ Client or user: It is an entity with a valid account that requests a service or resource through a web browser.
+
+▪ Service provider (SP): It is a server hosting applications or services for the users.
+
+▪ Identity provider (IdP): It is an entity within a system that stores user directories and validating mechanisms
+
+
+When SAML federation software is installed or configured, it builds a trust relationship between SP and IdP, enabling secure communication.
+
+When a user wishes to access any service or resource, he/she must be authenticated by the IdP. 
+
+Soon after a service request is initiated from the user, the SP sends an SAML request to the IdP to validate the user.
+
+The IdP then creates an XML-based SAML authentication assertion that describes what type of login attempt has been initiated (password, two-factor, etc.);
+the SAML attribute assertion, which contains specific details about the user; and the authorization assertion, which describes whether the user can be allowed or denied access to the service. XML-based assertions are then forwarded to the SP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
