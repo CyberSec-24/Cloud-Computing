@@ -1,0 +1,33 @@
+AzureGoat is vulnerable to the design infrastructure on Azure that showcases the latest OWASP Top 10 web application security risks (2021) and other common misconfigurations based on services such as App Functions, CosmosDB, Storage Accounts, Automation, and Identities. 
+
+The tool allows attackers to mimic real-world infrastructure but with added vulnerabilities.
+
+It offers attackers multiple escalation paths and is designed using a black-box testing approach.
+
+The following are various scenarios in which attackers can use AzureGoat to practice and hone their attack skills: 
+
+▪ Insecure Direct Object Reference Leverage insecure direct object reference vulnerabilities to exploit the target user’s account and change passwords
+
+▪ Server-Side Request Forgery (SSRF) Execute an SSRF attack to abuse server functionality that can access or modify resources
+
+▪ Security Misconfiguration
+Identify security misconfigurations for accessing sensitive information from Azure resource groups.
+Attackers can use the misconfigurations to fetch the storage container component list and explore open ports in a network
+
+▪ Privilege Escalation Leverage misconfiguration and escalate privileges to the resource group owner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
