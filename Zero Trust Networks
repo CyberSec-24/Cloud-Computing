@@ -1,0 +1,32 @@
+The Zero Trust model is a security implementation that by default assumes every user trying to access the network is not a trusted entity and verifies every incoming connection before allowing access to the network. 
+
+It strictly follows the principle, “Trust no one and validate before providing a cloud service or granting access permission.” 
+
+This does not mean that the company’s employees would cause harm, but the network can be compromised or a person trying to use the network may not be trustworthy. 
+
+This trust model prevents users/employees from accessing a network without being verified.
+
+It also allows companies to impose conditions, such as allowing employees to only access the appropriate resources required for their work role
+
+The control plane permits network access requests only from legitimate and verified users or devices. 
+
+Fine-grain policies are applied at this layer based on the role in the organization, time of day, and device type. 
+
+To access more secured Internet resources, users need stronger authentication. 
+
+Once the access request is approved by the control panel, the data plane is configured to accept traffic only from that particular client
+
+The idea behind implementing this model is to ensure a secure way of resource accessing, enforce strict access control, and monitor the network traffic flow
+
+Zero Trust can be integrated with techniques such as encryption, multifactor authentication, privileged access management (PAM). 
+
+This trust network follows the micro-segmentation method to break the network zone into smaller pieces to provide separate access to certain parts of the network. 
+
+If any perimeter breach is identified, the micro-segmentation prevents the network from further exploitation
+
+
+
+
+
+
+
