@@ -1,0 +1,58 @@
+Cloud access security brokers (CASBs) are on-premise or cloud-hosted solutions. 
+
+They are responsible for enforcing security, compliance, and governance policies in cloud applications. 
+
+A CASB is located between the on-premise infrastructure of an organization and the infrastructure of a cloud provider.
+
+It acts as a gatekeeper that enables organizations to extend their security policies beyond their own infrastructure.
+
+
+Features of CASB 
+▪ Visibility into cloud usage 
+It finds shadow IT cloud services and provides visibility into the user activities with the allowed cloud applications.
+
+▪ Data security
+It enforces data-centric security encryption, tokenization, access control, and information rights management.
+
+▪ Threat protection
+It detects and responds to malicious insider threats, privileged user threats, and compromised accounts.
+
+▪ Compliance
+It discovers critical data in the cloud and enforces DLP policies to satisfy the data residency and compliance requirements.
+
+
+CASBs offer the following:
+▪ Firewalls to identify malware, thereby preventing the malware from entering the enterprise network.
+
+▪ Authentication for user credentials, ensuring that only the allowed users can access the required organizational resources.
+
+▪ WAFs to prevent malware from breaching security at the application level instead of the network level.
+
+▪ DLP prevents users from transferring critical information outside the organization
+
+
+How CASBs work: 
+A CASB works by
+▪ Ensuring network traffic between on-premise devices and the cloud provider complies with the organizational security policies.
+
+▪ Provides insights into the use of cloud applications across cloud platforms and identifies unsanctioned use.
+
+▪ Uses auto-discovery to identify o Cloud applications in use o High-risk applications o High-risk users
+
+▪ Enforcing different security access controls such as encryption and device profiling. ▪ Providing services such as credential mapping when SSO is not available
+
+
+CASB Solutions 
+▪ Forcepoint ONE CASB S Forcepoint ONE CASB provides complete security for all cloud applications. 
+
+Its key features include cloud application discovery, cloud application risk scoring, data classification, user and application governance, real-time activity monitoring/analytics, 
+automatic anomaly detection, data loss prevention, and integration with third-party solutions
+
+
+
+
+
+
+
+
+
