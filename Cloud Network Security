@@ -1,0 +1,68 @@
+A cloud network is virtual IT infrastructure managed by cloud service providers (CSPs), where network resources are supplied on demand in the form of private and public clouds. 
+
+By creating a virtual environment within the cloud through an existing physical network, CSPs can perform network operations on the public cloud using individual client accounts. 
+
+Cloud network security can be achieved in the following ways
+
+▪ Virtual private cloud (VPC):
+VPC is a secure and independent private cloud environment that resides within the public cloud. 
+
+VPC clients can execute programs, host applications, save data, and perform anything they wish on a private network using their individual accounts, but the private cloud is hosted by the public cloud provider.
+
+A VPC is generally independent from other VPCs running with the same account; hence, one PC client cannot view the traffic directed to another client’s VPCs
+
+The client can also create an IPv6 block and add multiple subnets within that block. 
+
+VPC can merge the scalability and other optimal features of public cloud computing with the data segregation of private cloud computing. 
+
+VPC resources are available on demand and can be expanded and configured based on the requirement
+
+
+▪ Public and private subnets: The subnets in VPC can be public or private. 
+
+The virtual machines residing in the public subnet can transmit data packets directly over the web, while the VMs in a private subnet cannot. 
+
+A public subnet consists of an outward path that transmits messages via an Internet Gateway (IGW), which allows IPv4 and IPv6 traffic from the VPC without any conditions on the bandwidth.
+
+VMs in the public subnet can also receive inbound traffic via the IGW as long as their network ACLs and security groups permit it.
+
+A private subnet can connect to the external web via a public network address translation (NAT) gateway. 
+
+The routing device itself performs NAT. Additionally, NAT does not directly permit inward traffic from the web, which makes the subnet private. 
+
+The external connectivity for the private subnet can also be created using VPN services
+
+
+▪ Transit gateways: 
+A transit gateway is a network routing solution that establishes and manages communication between an on-premises consumer network and VPCs via a centralized unit. 
+
+This approach simplifies the network topology and eliminates complicated peering connections.
+
+However, these communications can be allowed or blocked by cloud-specific ACLs depending on the port numbers and IP addresses of the hosts. 
+
+Through the centralized unit, an administrator or network manager can have a clear picture of the entire network, even if device connections are made through a software-defined wide area network (SD-WAN)
+
+
+▪ VPC endpoint: 
+A VPC endpoint establishes a private connection between a VPC and another cloud service without access to the Internet, external gateways, NAT solutions, VPN connections, or public addresses. 
+
+Therefore, the traffic between endpoints does not leave the organization’s network. 
+
+The endpoints here are virtual computing devices. 
+
+They are redundant, scalable, and highly available VPC elements that allow interaction between virtual machines in the VPC and cloud services without any bandwidth constraints or availability failures.
+
+The following are the two types of VPC endpoints.
+
+o Interface endpoint: 
+It is an elastic network interface (ENI) that has a private IP address within the limit of a defined subnet.
+It operates as an initial point of source for traffic towards a VPC or supported cloud services.
+
+o Gateway-load-balancer endpoint:
+It is also an ENI and operates as an initial point of source to impede traffic flow and divert it to a service that has been configured through a gateway load balancer, 
+which is then used for security inspection
+
+
+
+
+
