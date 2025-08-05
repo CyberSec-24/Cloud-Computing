@@ -1,0 +1,37 @@
+Enumerating Google Cloud Services using gcp_service_enum
+
+gcp_service_enum is a Python script that allows attackers to discover various GCP services, including Compute Engine instances and Cloud Storage buckets.
+
+Attackers can use this tool to identify publicly accessible resources and misconfigurations within a targeted Google Cloud account by providing a service account key file
+
+Attackers can run the following command to enumerate services on a targeted GCP account using `gcp_service_enum` and save the results to a file:
+gcp_enum_services.py -f <service account key file> --output-file <output file>
+
+
+
+Enumerating GCP Resources using GCP Scanner
+
+Attackers use GCP Scanner to determine the level of access that certain credentials possess within GCP and evaluate the impact of compromised VMs, containers, GCP service accounts, or leaked OAuth2 token keys.
+
+It supports a wide range of GCP resources including GCE, GCS, GKE, App Engine, Cloud SQL, BigQuery, Spanner, Pub/Sub, Cloud Functions, BigTable, CloudStore, KMS, and Cloud Services.
+
+GCP Scanner can extract and use credentials such as GCP VM instance metadata, user credentials from gcloud profiles, OAuth2 Refresh Tokens with cloud-platform scope, and GCP service account keys in JSON format. 
+
+By leveraging these capabilities, attackers can gain insight into permissions and potential vulnerabilities, enabling more targeted and effective exploitation strategies within the Google Cloud environment
+
+Attackers can execute the following commands to scan and enumerate various resources and permissions within a target GCP environment:
+python3 scanner.py -o <output file> -g <Gcloud profile path> 
+Here, 
+-o: Specifies the output file where the results are saved.
+-g: Specifies the path to the gcloud profile containing the credentials to be used for scanning
+
+
+
+
+
+
+
+
+
+
+
