@@ -1,0 +1,38 @@
+Attackers can gather information to uncover weaknesses in containerized environments.
+
+For this purpose, attackers can use kubectl, a command-line tool, to interact with the Kubernetes cluster and gather relevant information about the cluster and its components for further activities.
+
+The following are various commands to perform information gathering using kubectl: 
+▪ Run the following command to list all the pods in the Kubernetes cluster: kubectl get pods
+
+▪ Run the following command to fetch detailed information about a specific pod: kubectl describe pod <pod-name>
+
+▪ Run the following command to dump the logs of a specific pod: kubectl logs <pod-name>
+
+▪ Run the following command to display all the services running in the cluster: kubectl get services
+
+▪ Run the following command to display detailed information about the services: kubectl describe services
+
+▪ Run the following command to display all the deployments in a cluster: kubectl get deployment
+
+▪ Run the following command to fetch detailed information about a specific deployment: kubectl describe deployment <deployment-name>
+
+▪ Run the following command to display all the service accounts in a cluster: kubectl get serviceaccounts
+
+▪ Run the following command to display detailed information about service accounts: kubectl describe serviceaccounts
+
+With these commands, attackers can gather information about a containerized environment that may assist them in uncovering specific vulnerabilities and exploit them easily
+
+
+
+
+
+
+
+
+
+
+
+
+
+
