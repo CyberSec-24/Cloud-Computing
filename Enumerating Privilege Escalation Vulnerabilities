@@ -1,0 +1,32 @@
+The GCP Privilege Escalation Scanner is a Python script that an attacker can use to identify potential privilege escalation vulnerabilities within GCP environments.
+
+This scanner evaluates IAM policies and permissions across GCP resources to detect misconfigurations and weaknesses that could allow an attacker to gain elevated privileges
+
+Given below are the steps an attacker initiates to enumerate privilege escalation vulnerabilities on a targeted GCP project using the GCP Privilege Escalation Scanner: 
+▪ Step 1: Run the following command to list all permissions of each member within the targeted GCP project:
+python3 enumerate_member_permissions.py --project-id test-<project ID>
+
+▪ Step 2: Using the enumerated permissions, scan for potential privilege escalation vulnerabilities:
+python3 check_for_privesc.py
+
+▪ Step 3: Once the scan is completed, the attacker obtains the following files containing privilege escalation vulnerabilities for the GCP project: 
+o all_org_folder_proj_sa_permissions.json: This file contains a list of all the members and their associated permissions within a project.
+o privesc_methods.txt: This file lists all the identified methods that can be used to escalate privileges within the GCP environment
+
+
+o setIamPolicy_methods.txt – This file details all the detected methods that involve setting IAM policies that can be exploited for privilege escalation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
