@@ -1,0 +1,11 @@
+As Kubernetes is the de facto container deployment and management tool, its workloads must be regularly monitored and secured with appropriate security implementations.
+
+Security professionals use tools such as Advanced Cluster Security for Kubernetes, Aqua Kubernetes Security, and Kyverno to secure the Kubernetes environment.
+
+▪ Advanced Cluster Security for Kubernetes
+Advanced Cluster Security (ACS) for Kubernetes is a comprehensive solution designed to enhance the security of Kubernetes environments. 
+
+It also helps build, deploy, and run cloud-native applications.
+
+It provides a robust set of tools and features focused on visibility, compliance, threat detection, and risk management to ensure comprehensive protection for cloud-native workloads
+
