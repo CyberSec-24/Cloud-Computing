@@ -1,0 +1,50 @@
+Attackers can exploit open network security groups (NSGs) in Azure to gain unauthorized network access by targeting ports that allow unrestricted traffic. 
+
+When NSG rules are configured to permit inbound traffic from any IP address on commonly used ports, such as SSH (port 22), HTTP (port 80), HTTPS (port 443), or database ports (e.g., MySQL on port 3306), these services are exposed to the Internet. 
+
+Attackers can scan for open ports and exploit them, launch brute-force attacks on SSH to gain control, execute commands, exfiltrate data, or establish persistence within the network.
+
+Similarly, attackers can use open NSGs to identify and exploit vulnerabilities such as SQL injection, XSS, or RCE, leading to unauthorized access, data breaches, and further penetration into the Azure environment
+
+An attacker can use the following methods to identify open network security groups (NSGs) in the Azure environment: 
+
+▪ Using Azure Portal: 
+o Step 1: Navigate to the Azure Portal.
+
+o Step 2: In the left-hand menu, select "All services" and then search for and select "Network security groups.”
+
+o Step 3: Select the network security group (NSG) you want to review from the list.
+
+o Step 4: In the NSG settings, select "Inbound security rules" or "Outbound security rules" to review the rules.
+
+o Step 5: Check for any rules that allow access from 0.0.0.0/0, indicating unrestricted traffic from any IP address
+
+
+ Using Azure CLI:
+o Run the following command to view all network security groups: az network nsg list --out table
+This command displays a table with details of the NSGs, including their names, resource groups, and locations.
+
+o Run the following command to view detailed information about a specific NSG, including its rules:
+az network nsg show --resource-group <ResourceGroupName> --name <NSGName>
+
+o Run the following command to list all the security rules within a specific NSG:
+az network nsg rule list --resource-group <ResourceGroupName> --nsg-name <NSGName> --output table
+
+Review the listed security rules to identify open or overly permissive rules. Look for rules with wide ranges of allowed IP addresses and ports, especially those allowing inbound access from 0.0.0.0/0 (which means any IP address). 
+
+These rules can potentially expose the network to unauthorized access.
+
+o You can also run the following command to filter the security rules to determine which rules allow inbound access from any IP address (0.0.0.0/0):
+az network nsg rule list --resource-group <ResourceGroupName> --nsg-name <NSGName> --query "[?direction=='Inbound' && sourceAddressPrefix=='*']" --output table
+
+This command queries the security rules to determine the inbound rules where the source address prefix is set to any IP address.
+
+
+
+
+
+
+
+
+
+
