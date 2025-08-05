@@ -1,0 +1,40 @@
+Enumerating GCP organizations, projects, and cloud storage buckets helps attackers view the cloud structure, find all projects, and identify misconfigured or public buckets. 
+
+This allows them to retrieve valuable data, exploit access control weaknesses, and gain unauthorized access to sensitive information. 
+
+The attackers can use the following commands for this purpose
+
+▪ Run the following command to list organizations accessible by the target user account: 
+gcloud organizations list 
+This command displays a comprehensive list of organizations associated with the target user account, along with the organization IDs.
+
+▪ Run the following command to view all folders that the user has access within the specified organization: 
+gcloud resource-manager organization=<organization_id>
+
+▪ Run the following command to identify all active projects in which the current account holds owner, editor, browser, or viewer permission:
+gcloud projects list
+
+▪ Run the following command to list all cloud storage buckets within the default project:
+gsutil ls
+Attackers can find cloud storage buckets for a particular project by specifying project_id using the -p flag.
+
+▪ Run the following command to retrieve the permissions on a specific cloud storage bucket:
+gsutil iam get gs://<bucket_name>
+
+▪ Run the following command to find the bucket content, including the objects and names of the subdirectories it contains:
+gsutil ls gs://<bucket_name>
+Attackers can use the -r option to recursively list the bucket contents
+
+
+
+
+
+
+
+
+
+
+
+
+
+
