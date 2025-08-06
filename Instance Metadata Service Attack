@@ -1,0 +1,40 @@
+• An instance metadata service (IMDS) provides information about an instance, its associated network, and the software configured to run the instance
+
+• Attackers perform IMDS attacks by exploiting a zero-day vulnerability on the target application server or by using the information leaked via a reverse proxy implemented by the administrators
+
+• Using this attack, attackers connect to the cloud instance and gain sensitive information such as user data and roles associated with that instance
+
+
+An instance metadata service (IMDS) provides information about an instance, its associated network, and the software configured to run the instance. 
+
+IMDS also generates credentials for roles associated with an instance. 
+
+Based on the assigned role or policy, the software configured on the instance can also access the resources on the cloud storage.
+
+Attackers perform IMDS attacks by exploiting a zero-day vulnerability on the target application server or by using information leaked via a reverse proxy implemented by the administrators.
+
+The main intention of attackers performing an IMDS attack is to gain unauthorized access to the network resources by compromising instances.
+
+If attackers can successfully leverage a zero-day vulnerability or credentials leaked by a reverse proxy, they can connect to the cloud instance and gain sensitive information such as user data and various roles associated with that instance,
+which can be further leveraged to perform attacks such as accessing and abusing or modifying the resources located on the cloud storage
+
+
+How the Attack is Launched 
+▪ First, an attacker exploits a zero-day vulnerability or a reverse proxy implemented on the target application server.
+
+▪ The attacker then compromises the cloud instance running on the server and acquires metadata of the instance.
+
+▪ Next, the attacker uses the obtained credentials to gain access to the cloud resources. 
+
+
+Countermeasures: 
+▪ Use IMDSv2 instead of IMDSv1. 
+
+▪ Turn off IMDS when not required. 
+
+▪ Roles should not be assigned to an instance if not required; if required, assign the least privileges to the roles.
+
+▪ Restrict the IMDS access of suspected users
+
+
+
