@@ -1,0 +1,54 @@
+• Cryptojacking is the unauthorized use of the victim’s computer to stealthily mine digital currency 
+
+• Cryptojacking attacks are highly lucrative, which involve both external attackers and rogue insiders
+
+• To perform this attack, the attackers leverage attack vectors like cloud misconfigurations, compromised websites, and client or server-side vulnerabilities
+
+Cryptojacking is the unauthorized use of the victim’s computer to stealthily mine digital currency.
+
+Cryptojacking attacks are highly lucrative, involving both external attackers and internal rogue insiders. 
+
+To perform this attack, attackers leverage attack vectors like cloud misconfigurations, compromised websites, and client or server-side vulnerabilities.
+
+ an attacker exploits misconfigured cloud instances to inject malicious crypto-mining payload into a web page or third-party library loaded by the web page.
+
+Then, the attacker lures the victim to visit the malicious web page and when the victim opens the web page, it automatically runs the crypto-miner in the victim’s browser using JavaScript. 
+
+Using JavaScript-based crypto-miners, such as CoinHive and Cryptoloot, attackers can easily embed malicious crypto-mining scripts into legitimate websites using a link to CoinHive.
+
+Attackers make this attack more complex by hiding the malicious crypto-mining script using various hiding techniques, such as encoding, redirections, and obfuscation. 
+
+The configuration for the payload is generally dynamic or hardcoded. 
+
+Cryptojacking attacks can cause severe impact on web sites, endpoints, and even the whole cloud infrastructure
+
+
+Steps of cloud cryptojacking attacks:
+▪ Step 1: An attacker compromises the cloud service by embedding a malicious crypto-mining script.
+
+▪ Step 2: When the victim connects to the compromised cloud service, the crypto-mining script gets executed automatically.
+
+▪ Step 3: The victim naively starts mining the cryptocurrency on behalf of the attacker and adds a new block to the blockchain.
+
+▪ Step 4: For each new block added to the blockchain, the attacker gets a reward in the form of cryptocurrency coins illicitly
+
+
+Countermeasures: 
+▪ Ensure to implement a strong password policy. 
+
+▪ Always preserve three different copies of the data in different places and one copy off-site.
+
+▪ Ensure to patch the webservers and devices regularly. 
+
+▪ Use encrypted SSH key pairs instead of passwords for securing access to cloud servers. 
+
+▪ Implement CoinBlocker URL and IP Blacklist/blackholing in the firewall. 
+
+▪ Employ real-time monitoring of the web page document object model (DOM) and JavaScript environments for detecting and mitigating malicious activities at an early stage.
+
+▪ Use the latest antivirus, anti-malware, and adblocker tools in the cloud. 
+
+▪ Implement browser extensions for scanning and terminating scripts similar to the CoinHive's miner script.
+
+▪ Use endpoint security management technology to detect any rogue applications in the devices
+
