@@ -1,0 +1,35 @@
+Wrapping Attack 
+
+A wrapping attack is performed during the translation of the SOAP message in the TLS layer, where attackers duplicate the body of the message and send it to the server as a legitimate user.
+
+As shown in the below figure, when users send a request from their VM through a browser, the request first reaches the web server.
+
+Then, a SOAP message containing structural information is generated and exchanged with the browser during the passing of the message. 
+
+Before the message passing occurs, the browser needs to sign the XML document and canonicalize it.
+
+Additionally, it should append the signature values to the document. Finally, the SOAP header should contain the necessary information for the destination after computation. 
+
+In a wrapping attack, adversary deception occurs during the translation of the SOAP message in the TLS.
+
+The attacker duplicates the body of the message and sends it to the server as a legitimate user.
+
+The server checks the authentication through the signature value (which is also duplicated) and verifies its integrity.
+
+As a result, the adversary can intrude in the cloud and run malicious code to interrupt the usual functioning of the cloud servers
+
+
+Countermeasures: 
+▪ Use XML schema validation to detect SOAP messages. 
+
+▪ Apply authenticated encryption in the XML encryption specification. 
+
+▪ Improve the interface between signature verification and business logic functions. 
+
+▪ Ensure that users specify the SOAP body and headers to be signed by implementing the WS-SecurityPolicy “SignedParts” policy.
+
+▪ Use the CryptoCoverageChecker interceptor to specify the XPath expression related to the element that should be signed or encrypted.
+
+
+
+
