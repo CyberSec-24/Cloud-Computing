@@ -1,0 +1,42 @@
+MITC attacks are an advanced version of MITM attacks. 
+
+In MITM attacks, an attacker uses an exploit that intercepts and manipulates the communication between two parties, while MITC attacks are carried out by abusing cloud file synchronization services, 
+such as Google Drive or DropBox, for data compromise, command, and control (C&C), data exfiltration, and remote access. 
+
+Synchronization tokens are used for application authentication in the cloud but cannot distinguish malicious traffic from normal traffic.
+
+Attackers abuse this weakness in cloud accounts to perform MITC attacks
+
+• Man-in-the-Cloud (MITC) attacks are an advanced version of Man-in-the-middle (MITM) attacks
+
+• MITC attacks are performed by abusing cloud file synchronization services such as Google Drive or Drop Box for Data compromise, command and control (C&C), data exfiltration, and remote access
+
+• The attacker tricks the victim into installing a malicious code, which plants the attacker’s synchronization token on the victim’s drive
+
+• Then, the attacker steals the victim’s synchronization token and uses the stolen token to gain access to the victim’s files Attacker
+
+• Later, the attacker restores the malicious token with the original synchronized token of the victim, thus returning the drive application to its original state and stays undetected
+
+
+ the attacker tricks the victim into installing malicious code that plants the attacker’s synchronization token on the victim’s drive. 
+
+Now, the victim’s Drive application syncs with the attacker’s account. 
+
+Then, the attacker steals the victim’s synchronization token and uses it to gain access to the victim’s files.
+
+Later, the attacker restores the malicious token with the original synchronized token of the victim, returning the Drive application to its original state and stays undetected
+
+
+Countermeasures: 
+▪ Use an email security gateway to detect the social engineering attacks that can lead to MITCs.
+
+▪ Hardening the policies of token expiration can prevent this kind of attacks. ▪ Use efficient antivirus software that can detect and delete malware. ▪ Implement cloud access security broker (CASB) to monitor cloud traffic for detection of anomalies with the generated instances.
+
+▪ Monitor employee activities to detect any significant signs of cloud synchronization token abuses.
+
+▪ Encrypt the data stored on the cloud and ensure encryption keys are not stored within the same cloud service.
+
+▪ Implement two-factor authentication
+
+
+
