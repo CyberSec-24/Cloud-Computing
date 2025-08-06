@@ -1,0 +1,27 @@
+Side-Channel Attacks or Cross-guest VM Breaches 
+
+Attackers can compromise the cloud by placing a malicious virtual machine near a target cloud server and then launch a side-channel attack. 
+
+The attacker runs the VM on the same physical host as the target VM and takes advantage of the shared physical resources (processor cache). 
+
+Then, he launches side-channel attacks (timing attack, data remanence, acoustic cryptanalysis, power monitoring attack, and differential fault analysis) to extract cryptographic keys/plain text secrets to steal the victim’s credentials. 
+
+Side-channel attacks can be implemented by any co-resident user and are mainly related to vulnerabilities in shared technology resources. 
+
+Finally, the attacker uses the stolen credentials to impersonate the victim.
+
+
+Side-Channel Attack Countermeasures 
+▪ Implement a virtual firewall in the cloud server back-end of the cloud computing; this prevents the attacker from placing malicious VMs.
+
+▪ Implement random encryption and decryption (encrypts data using RSA, 3DES, AES algorithms).
+
+▪ Lockdown OS images and application instances to prevent compromising vectors that might provide access.
+
+▪ Check for repeated access attempts to local memory and to any hypervisor processes or shared hardware cache by tuning and collecting local process monitoring data and logs for cloud systems.
+
+▪ Code the applications and OS components so that they access shared resources, such as memory cache, in a consistent and predictable way. 
+This coding style prevents attackers from collecting sensitive information, such as timing statistics and other behavioral attributes.
+
+
+
