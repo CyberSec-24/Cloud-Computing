@@ -1,0 +1,61 @@
+▪ Ensure proper validation of file contents and their path at every stage of processing. 
+
+▪ Implement configuration method for the credential paths and do not depend on the hardcoded paths.
+
+▪ Raise errors explicitly after each step of a compound operation.
+
+▪ Use the copy-then-rename method for log rotation to ensure that logs are not lost when restarting the kubelet.
+
+▪ Ensure secure and reliable handling of JSON data by using well-tested JSON libraries and proper type structures in your applications that interact with Kubernetes APIs.
+
+▪ Never use compound shell commands without proper validations because they affect the system state.
+
+▪ Check the returned error value of os.Readlink /proc/<pid>/exe explicitly to determine if PID is a kernel process.
+
+▪ Use centralized libraries to perform common tasks and use common parsing functions , such as ParsePort, across the codebase to increase code readability.
+
+▪ Use persistent logs in place of log rotation, so that the logs can be written in linear order and new logs can be created when rotation is required.
+
+▪ Use single encoding format for all configuration tasks because it supports centralized validation.
+
+▪ Limit the size of manifest files to prevent out-of-memory errors in kubelet
+
+▪ Use key management services to enable secret data encryption and avoid using AES-Galois/Counter mode or cipher block chaining for encryption.
+
+▪ Authenticate all HTTPS connections by default to ensure certificates are issued by the CA and prevent MITM attacks.
+
+▪ Avoid using legacy SSH tunnels because they do not perform proper validation of server IP addresses.
+
+▪ Use online certificate status protocol (OSCP) stapling to check the revocation status of certificates.
+
+▪ Use secure TLS by default in development and production configurations to reduce vulnerabilities owing to misconfiguration.
+
+▪ Use ACLs to manage the file access permissions and prevent unauthorized access. 
+
+▪ Use log filtering to remove basic authentication, such as bearer tokens and other sensitive information, from the log data.
+
+
+
+Best Practices for Serverless Security
+
+▪ Minimize serverless permissions in the development phase to reduce the attack surface area.
+
+▪ Monitor function layers regularly to identify the attempts of malicious code injection and other web server attacks.
+
+▪ Use third-party security tools because they provide additional layers of visibility and control.
+
+▪ Regularly patch and update function dependencies and applications. 
+
+▪ Use tools, such as Snyk, to scan serverless applications for known vulnerabilities. 
+
+▪ Maintain isolated function perimeters and avoid relying on the function access and invocation ordering.
+
+▪ Properly sanitize event input to prevent code injection attacks.
+
+▪ Use security libraries that disable access to resources and implement runtime least-privileges.
+
+▪ Deploy functions in minimal granularity to minimize the level of detail and prevent implicit global roles.
+
+▪ Employ data validation technique on schemas and data transfer objects, instead of data serialization and deserialization
+
+
