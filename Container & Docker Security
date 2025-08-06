@@ -1,0 +1,91 @@
+▪ Regularly monitor the CVEs of the container runtime and remediate, if vulnerabilities are detected.
+
+▪ Enable comprehensive logging and auditing to track access, changes to containers and their configurations.
+
+▪ Configure applications to run as normal users to prevent privilege escalation. 
+
+▪ Configure the host's root file system in read-only mode to restrict the write access and prevent malware injection attacks.
+
+▪ Avoid using third-party software and employ application security scanning tools to protect containers from malicious software.
+
+▪ Perform regular scanning of the images in the repository to identify vulnerabilities or misconfigurations.
+
+▪ Deploy application firewalls for enhancing container security and prevent threats entering the environment.
+
+▪ Ensure authenticated access to registries including sensitive images and data.
+
+▪ Use minimal base images to reduce the attack surface and potential vulnerabilities. 
+
+▪ Use a separate database for each application for greater visibility of individual applications and enhanced data management.
+
+▪ Configure orchestrators to deploy a set of hosts separately based on their sensitivity level.
+
+▪ Automate the compliance to the container runtime configuration standards.
+
+▪ Perform continuous monitoring of images for embedded malware.
+
+▪ Store sensitive data externally and allow dynamic access at the runtime. 
+
+▪ Maintain a set of trusted registries and images and ensure only images from this set are permitted to run in the container environment.
+
+▪ Use mandatory access control tools, such as SELinux and AppArmor, to prevent attacks on applications and system services.
+
+▪ Employ real-time threat detection solutions and develop incident response capabilities to handle security incidents
+
+
+
+
+Best Practices for Docker Security
+
+▪ Avoid exposing the Docker daemon socket because it is the basic entry point for the Docker API.
+
+▪ Only use trusted Docker images because Docker images created by malicious users may be injected with backdoors.
+
+▪ Regularly patch host OS and Docker with the latest security updates. 
+
+▪ Limit capabilities by allowing access only to the features required by the container. You can use the --cap-drop all command to drop all capabilities assigned to the container and then assign only the necessary capabilities.
+
+▪ Always run Docker images with --security-opt=no-new-privileges to prevent privilege escalation attacks using setuid or setgid binaries.
+
+▪ Disable the inter-container communication feature when running Docker demon by using --icc=false. To communicate with other containers, you can use --link=CONTAINER_NAME_or_ID:ALIAS option.
+
+▪ Use Linux security modules, such as seccomp, AppArmor, and SELinux, to gain fine-grained control over the processes.
+
+▪ Limit resources such as memory, CPU, the maximum number of file descriptors, the maximum number of processes, and restarts to prevent DoS attacks.
+
+▪ The default user setting for the Docker image is root; configure the container application to run as unprivileged user to prevent privilege escalation attacks.
+
+▪ Install only necessary packages to reduce the attack surface. 
+
+▪ Check that the Docker images from the remote registry are digitally signed using Docker content trust.
+
+▪ Avoid using environmental variables for sensitive information and use Docker secrets management for encrypting the secret information in transit.
+
+▪ Secure the API endpoints with HTTPS when exposing the RESTful API.
+
+▪ Avoid using the default bridge network when using the single-host app with networking. 
+
+▪ Always store sensitive data in Docker volumes for enhanced data security, data persistence, and data encryption.
+
+▪ Establish basic authentication by enabling TLS for secure communication over HTTPS between Docker client and the daemon.
+
+▪ Use tools such as InSpec and dive to detect Docker vulnerabilities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
