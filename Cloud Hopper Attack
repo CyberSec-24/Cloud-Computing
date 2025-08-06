@@ -1,0 +1,47 @@
+Cloud hopper attacks are triggered at managed service providers (MSPs) and their customers.
+
+Once the attack is successfully implemented, attackers can gain remote access to the intellectual property and critical information of the target MSP and its global users/customers.
+
+Attackers also move laterally in the network from one system to another in the cloud environment to gain further access to sensitive data pertaining to the industrial entities, such as manufacturing, government bodies, healthcare, and finance
+
+Attackers initiate spear-phishing emails with custom-made malware to compromise user accounts of staff members or cloud service firms to obtain confidential information.
+
+Attackers can also use PowerShell and PowerSploit command-based scripting for reconnaissance and information gathering.
+
+Attackers use the gathered information for accessing other systems connected to the same network. 
+
+To perform this attack, attackers also leverage C&C to sites spoofing legitimate domains and file-less malware that resides and executes from memory.
+
+Attackers breach the security mechanisms impersonating a valid service provider and gain complete access to corporate data of the enterprise and connected customers. 
+
+As shown in the figure, an attacker infiltrates target MSP provider and distributes malware to gain remote access. 
+
+The attacker then accesses the target customer profiles with his/her MSP account, compresses the customer data, and stores them in the MSP.
+
+
+
+Countermeasures: 
+▪ Implement multi-factor authentication to prevent compromise of credentials. 
+
+▪ Ensure mutual co-ordination between customers and CSPs in case of abnormal incidents or activities.
+
+▪ Ensure customers are aware and follow the cloud service policies. 
+
+▪ Use data categorization to reduce the impact of the attack and defend against any data breach.
+
+▪ Utilize jump servers to enhance security and prevent cloud hopper attacks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
