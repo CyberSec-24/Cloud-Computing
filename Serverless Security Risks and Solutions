@@ -1,0 +1,108 @@
+A1 - Injection
+
+▪ Do not trust or make any assumptions regarding the input and its validity from any source.
+
+▪ Implement safe API, and employ parametrized interfaces or object relational mapping tools
+
+▪ Implement application whitelisting wherever necessary. 
+
+▪ Avoid special characters using a specific escape syntax in dynamic SQL queries.
+
+▪ Evaluate all entry points and event types of the system.
+
+▪ Run the functions with the least privileges necessary to execute the task.
+
+▪ Protect functions in execution state by using runtime defense solutions
+
+
+A2 – Broken Authentication
+
+ Employ identity and access control solutions provided by the cloud service provider, such as AWS Cognito, AWS Single Sign-On,
+Azure Active Directory B2C, Azure App Service, and Google Firebase Authentication
+
+▪ Implement strong authentication and access control on external-facing resources.
+
+▪ Employ secure service authentication methods, such as Federated Identity (SAML, OAuth2, Security Tokens, etc.), for authenticating internal resources
+
+
+A3 – Sensitive Data Exposure
+
+▪ Identify and classify sensitive data. 
+
+▪ Minimize the storage of sensitive data; only store necessary data. 
+
+▪ Encrypt data both in transit and at rest. 
+
+▪ Implement HTTPS endpoints for APIs. 
+
+▪ Employ CSP services for key management and encryption of stored data, secrets, and environment variables to the functions in runtime and data in transit
+
+
+A4 – XML External Entities (XXE)
+
+▪ Use only the CSP’s software development kits, whenever possible. 
+
+▪ Perform vulnerability scanning on supply chain libraries. 
+
+▪ Test API calls for XXE vulnerabilities. 
+
+▪ Always disable entity resolution
+
+
+A5 – Broken Access Control
+
+▪ Follow the least-privilege principle while granting permissions to functions
+
+▪ Review each function to detect excess privileges. 
+
+▪ Follow the cloud service provider's best practices, such as AWS IAM and Azure Identity Management best practices
+
+
+
+A6 – Security Misconfiguration
+
+▪ Enforce strong access control on cloud resources. 
+
+▪ Identify functions with unlinked triggers. 
+
+▪ Set the functions with a minimum timeout required. 
+
+▪ Employ automated tools to detect security misconfigurations in serverless applications.
+
+
+A7 – Cross-Site Scripting (XSS)
+
+▪ Encode all untrusted data before transmitting to the client. 
+
+▪ Use only well-known frameworks and headers
+
+
+A8 – Insecure Deserialization
+
+▪ Ensure validation of serialized objects originating from untrusted data. 
+
+▪ Scan third-party libraries for deserialization vulnerabilities. 
+
+▪ Monitor deserialization usage and exception to identify probable attacks
+
+
+A9 – Using Components with Known Vulnerabilities
+
+▪ Perform continuous monitoring of third-party libraries and dependencies
+
+▪ Deploy only signed packages and components from official sources.
+
+▪ Continuously check the vulnerability databases, such as the CVE and national vulnerability database.
+
+▪ Perform vulnerability scanning of third-party dependencies for known vulnerabilities using tools such as OWASP Dependency Check and Dependency-Track
+
+
+A10 – Insufficient Logging and Monitoring
+
+▪ Employ CSP monitoring tools, such as Azure Monitor, or AWS CloudTrail to detect anomalous behavior.
+
+▪ Employ auditing and monitoring mechanisms for data not originating from the CSP.
+
+
+
+
